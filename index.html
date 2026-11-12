@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARMAI FASHION DESIGN — Bespoke Couture & Royal Tailoring</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23110106'/%3E%3Crect x='3' y='3' width='58' height='58' rx='11' fill='none' stroke='%23EBB63D' stroke-width='1.5'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23EBB63D'%3EJ%3C/text%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js for Flowing Gold-Shot Crimson Silk Hero Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#110106',
+                        velvet: '#1B040C',
+                        burgundy: '#57090F',
+                        wine: '#78111B',
+                        gold: '#EBB63D',
+                        champagne: '#F9E18E',
+                        bronze: '#B8821D',
+                        ivory: '#F7EFE2',
+                        sand: '#C9B7A2'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-obsidian: #110106;
+            --bg-velvet: #1B040C;
+            --burgundy: #57090F;
+            --gold: #EBB63D;
+            --champagne: #F9E18E;
+            --bronze: #B8821D;
+            --ivory: #F7EFE2;
+            --sand: #C9B7A2;
+            --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+            --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background-color: var(--bg-obsidian);
+            color: var(--ivory);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: rgba(235, 182, 61, 0.28);
+            color: #F9E18E;
+        }
+
+        /* Metallic Logo-Matched Gold Typography */
+        .gold-text {
+            background: linear-gradient(135deg, #FFF1B8 0%, #EBB63D 48%, #B8821D 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .gold-border-subtle {
+            border-color: rgba(235, 182, 61, 0.24);
+        }
+
+        /* Seamless Integration for Jarmai Logo JPEG onto #110106 Ground */
+        .logo-blend {
+            -webkit-mask-image: radial-gradient(ellipse 92% 88% at 50% 50%, #000 70%, transparent 100%);
+            mask-image: radial-gradient(ellipse 92% 88% at 50% 50%, #000 70%, transparent 100%);
+        }
+
+        /* Subtle Velvet Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9990;
+            opacity: 0.16;
+            mix-blend-mode: soft-light;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.22'/%3E%3C/svg%3E");
+        }
+
+        /* Pressable Button Tactile Feedback */
+        .btn-press {
+            transition: transform 160ms var(--ease-out), background-color 220ms ease, border-color 220ms ease, color 220ms ease, box-shadow 220ms ease;
+        }
+        .btn-press:active {
+            transform: scale(0.97);
+        }
+
+        /* Smooth Custom Cursor Follower (Fine Pointer Devices Only) */
+        @media (hover: hover) and (pointer: fine) {
+            .cursor-follower {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 34px;
+                height: 34px;
+                border: 1px solid rgba(235, 182, 61, 0.45);
+                border-radius: 9999px;
+                pointer-events: none;
+                z-index: 9999;
+                transform: translate(-50%, -50%);
+                transition: width 320ms var(--ease-out),
+                            height 320ms var(--ease-out),
+                            background-color 260ms ease,
+                            border-color 260ms ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .cursor-follower.active {
+                width: 84px;
+                height: 84px;
+                background-color: rgba(87, 9, 15, 0.92);
+                border-color: rgba(235, 182, 61, 0.8);
+                box-shadow: 0 0 24px rgba(235, 182, 61, 0.18);
+            }
+        }
+
+        /* Editorial Card Motion & Golden Specular Sheen */
+        .editorial-card {
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform 420ms var(--ease-out), box-shadow 420ms var(--ease-out), border-color 280ms ease;
+        }
+        .editorial-card img {
+            transition: transform 900ms var(--ease-out), filter 450ms ease, opacity 450ms ease;
+            will-change: transform;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .editorial-card:hover img {
+                transform: scale(1.05);
+            }
+            .editorial-card:hover {
+                border-color: rgba(235, 182, 61, 0.55);
+            }
+        }
+        .sheen-layer {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(460px circle at var(--mx, 50%) var(--my, 50%), rgba(235, 182, 61, 0.2), transparent 55%);
+            opacity: 0;
+            transition: opacity 360ms ease;
+            pointer-events: none;
+            z-index: 5;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .editorial-card:hover .sheen-layer {
+                opacity: 1;
+            }
+        }
+
+        /* Blur-Masked Image Shuffle Transition */
+        .shuffle-stage {
+            position: relative;
+            overflow: hidden;
+        }
+        .shuffle-image {
+            transition: opacity 420ms var(--ease-out), filter 420ms var(--ease-out), transform 6000ms linear;
+        }
+        .shuffle-image.is-swapping {
+            opacity: 0.25;
+            filter: blur(4px);
+            transform: scale(1.03);
+        }
+        .shuffle-image.ken-burns {
+            transform: scale(1.055);
+        }
+
+        /* Stacked Deck Depth Cards in Hero */
+        .deck-back-1 {
+            transform: translate3d(16px, 14px, 0) rotate(2.6deg) scale(0.96);
+            transition: transform 520ms var(--ease-out), opacity 420ms ease;
+        }
+        .deck-back-2 {
+            transform: translate3d(-14px, 22px, 0) rotate(-2.4deg) scale(0.92);
+            transition: transform 520ms var(--ease-out), opacity 420ms ease;
+        }
+        .deck-wrapper:hover .deck-back-1 {
+            transform: translate3d(22px, 16px, 0) rotate(3.4deg) scale(0.965);
+        }
+        .deck-wrapper:hover .deck-back-2 {
+            transform: translate3d(-20px, 24px, 0) rotate(-3.2deg) scale(0.925);
+        }
+
+        /* Grid Shuffle Animation */
+        .grid-card-item {
+            transition: opacity 340ms var(--ease-out), transform 380ms var(--ease-out), filter 340ms ease;
+        }
+        .grid-card-item.shuffling-out {
+            opacity: 0;
+            filter: blur(3px);
+            transform: translateY(10px) scale(0.97);
+        }
+
+        /* Animated SVG Golden Thread Path */
+        .drape-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawLine 5.2s var(--ease-out) forwards infinite alternate;
+        }
+        @keyframes drawLine {
+            0% { stroke-dashoffset: 1000; }
+            100% { stroke-dashoffset: 0; }
+        }
+
+        /* Scroll Reveal */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 720ms var(--ease-out), transform 720ms var(--ease-out);
+        }
+        .reveal-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modal Entrance */
+        .modal-panel {
+            transition: opacity 260ms var(--ease-out), transform 280ms var(--ease-out);
+        }
+        .modal-backdrop.is-entering .modal-panel {
+            opacity: 0;
+            transform: scale(0.96);
+        }
+
+        /* Accessibility: Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 150ms !important;
+            }
+            .shuffle-image.ken-burns {
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-ivory antialiased">
+
+    <!-- Subtle Velvet Texture Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Custom Magnetic Cursor Follower -->
+    <div id="cursorFollower" class="cursor-follower hidden md:flex">
+        <span id="cursorText" class="text-[9px] tracking-[0.2em] uppercase text-champagne opacity-0 transition-opacity duration-200"></span>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 1. TOP NAVIGATION WITH OFFICIAL JARMAI LOGO & MOBILE DRAWER           -->
+    <!-- ===================================================================== -->
+    <header class="fixed top-0 inset-x-0 z-40 bg-obsidian/95 backdrop-blur-md border-b border-gold/20 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-5 md:px-10 h-20 flex items-center justify-between gap-4">
+            <!-- Left Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-[11px] tracking-[0.22em] uppercase text-sand font-normal">
+                <a href="#collection" data-cursor="EXPLORE" class="hover:text-gold transition-colors">Collection</a>
+                <a href="#film" data-cursor="ATELIER" class="hover:text-gold transition-colors">Showcase</a>
+                <a href="#philosophy" data-cursor="CRAFT" class="hover:text-gold transition-colors">Craftsmanship</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn"
+                    onclick="toggleMobileMenu()"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    class="md:hidden btn-press w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-burgundy/40">
+                <svg id="menuIconOpen" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h10"/>
+                </svg>
+                <svg id="menuIconClose" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+                </svg>
+            </button>
+
+            <!-- Center Official Brand Logo -->
+            <a href="#top" data-cursor="JARMAI" class="flex items-center gap-3 group shrink-0">
+                <img src="images/logo.jpeg"
+                     alt="Jarmai Fashion Design Official Logo"
+                     class="h-14 sm:h-16 w-auto object-contain logo-blend transition-transform duration-300 group-hover:scale-[1.03]" />
+            </a>
+
+            <!-- Right Consultation CTA -->
+            <div class="flex items-center gap-3">
+                <button onclick="openBookingModal()"
+                        data-cursor="RESERVE"
+                        class="btn-press px-4 sm:px-6 py-2.5 rounded-full bg-burgundy/70 border border-gold/45 text-champagne hover:bg-gold hover:text-obsidian hover:border-gold text-[10px] sm:text-[11px] tracking-[0.2em] uppercase font-medium shadow-sm">
+                    Book Fitting
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Slide-Down Navigation Drawer -->
+        <div id="mobileDrawer" class="hidden md:hidden bg-velvet/95 border-t border-gold/20 px-6 py-6 space-y-4">
+            <a href="#collection" onclick="closeMobileMenu()" class="block text-xs tracking-[0.22em] uppercase text-ivory hover:text-gold py-2 border-b border-gold/10">01 · Signature Collection</a>
+            <a href="#film" onclick="closeMobileMenu()" class="block text-xs tracking-[0.22em] uppercase text-ivory hover:text-gold py-2 border-b border-gold/10">02 · Runway Motion Reel</a>
+            <a href="#philosophy" onclick="closeMobileMenu()" class="block text-xs tracking-[0.22em] uppercase text-ivory hover:text-gold py-2 border-b border-gold/10">03 · Atelier Craftsmanship</a>
+            <button onclick="closeMobileMenu(); openBookingModal();" class="w-full btn-press py-3.5 rounded-full bg-gold text-obsidian text-xs tracking-[0.2em] uppercase font-semibold">
+                Request Private Fitting
+            </button>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- 2. HERO WITH THREE.JS GOLD SILK RIBBON & SHUFFLING COUTURE DECK       -->
+    <!-- ===================================================================== -->
+    <section id="top" class="relative min-h-screen pt-28 pb-16 md:py-32 flex items-center overflow-hidden border-b border-gold/20">
+        <!-- Ambient Radial Royal Burgundy Glow -->
+        <div class="absolute inset-0 pointer-events-none"
+             style="background: radial-gradient(circle at 18% 24%, rgba(87, 9, 15, 0.42), transparent 52%), radial-gradient(circle at 82% 72%, rgba(235, 182, 61, 0.11), transparent 46%);">
+        </div>
+
+        <!-- Three.js Flowing Gold & Crimson Silk Canvas -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-80">
+            <canvas id="silkHeroCanvas" class="w-full h-full block"></canvas>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-5 md:px-10 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            <!-- Left Editorial Typography -->
+            <div class="lg:col-span-6 xl:col-span-7 space-y-7">
+                <div class="inline-flex items-center gap-3 text-[11px] tracking-[0.26em] uppercase text-gold">
+                    <span class="w-8 h-[1px] bg-gold/70"></span>
+                    <span>Jarmai Atelier · Bespoke Couture Collection</span>
+                </div>
+
+                <h1 class="font-serif text-5xl sm:text-6xl xl:text-[5.25rem] leading-[0.98] text-ivory font-light tracking-tight">
+                    Regal Form, <br/>
+                    <span class="italic font-normal gold-text">Hand-Embroidered</span> <br/>
+                    Heritage &amp; Silhouette.
+                </h1>
+
+                <p class="max-w-lg text-sand text-base md:text-lg font-light leading-relaxed">
+                    Crafted at Jarmai Fashion Design for discerning dressers. From ceremonial royal Agbada and crisp geometric-placket Senator kaftans to sculpted Ankara peplum gowns and scalloped boubous.
+                </p>
+
+                <!-- Primary Action Buttons -->
+                <div class="pt-1 flex flex-wrap items-center gap-4">
+                    <a href="#collection"
+                       data-cursor="LOOKBOOK"
+                       class="btn-press px-7 py-4 rounded-full bg-gradient-to-r from-champagne via-gold to-bronze text-obsidian text-xs tracking-[0.2em] uppercase font-semibold shadow-lg shadow-gold/10 hover:brightness-105">
+                        Explore All 5 Designs
+                    </a>
+                    <button onclick="shuffleHeroNext()"
+                            data-cursor="SHUFFLE"
+                            class="btn-press px-6 py-4 rounded-full bg-velvet/90 border border-gold/40 text-champagne text-xs tracking-[0.2em] uppercase hover:bg-burgundy/60 hover:border-gold flex items-center gap-2">
+                        <span>Shuffle Lookbook</span>
+                        <span aria-hidden="true">↻</span>
+                    </button>
+                </div>
+
+                <!-- Bespoke Highlights Strip -->
+                <div class="pt-4 grid grid-cols-3 gap-4 border-t border-gold/20 max-w-lg">
+                    <div>
+                        <p class="font-serif text-2xl gold-text font-medium">Agbada</p>
+                        <p class="text-[11px] tracking-wider uppercase text-sand/80 mt-0.5">Royal Three-Piece</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl gold-text font-medium">Kaftan</p>
+                        <p class="text-[11px] tracking-wider uppercase text-sand/80 mt-0.5">Geometric Plackets</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl gold-text font-medium">Couture</p>
+                        <p class="text-[11px] tracking-wider uppercase text-sand/80 mt-0.5">Ankara &amp; Boubou</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Interactive Shuffling Style Deck -->
+            <div class="lg:col-span-6 xl:col-span-5">
+                <div class="deck-wrapper relative max-w-md mx-auto pb-4"
+                     onmouseenter="pauseHeroShuffle(true)"
+                     onmouseleave="pauseHeroShuffle(false)">
+
+                    <!-- Stacked Background Depth Cards (Visual Shuffle Queue) -->
+                    <div class="deck-back-2 absolute inset-0 rounded-2xl bg-velvet/90 border border-gold/20 overflow-hidden pointer-events-none opacity-65">
+                        <img id="heroBackImg2" src="images/1.jpg" alt="" class="w-full h-full object-cover opacity-55" />
+                        <div class="absolute inset-0 bg-obsidian/55"></div>
+                    </div>
+                    <div class="deck-back-1 absolute inset-0 rounded-2xl bg-velvet/95 border border-gold/30 overflow-hidden pointer-events-none opacity-85">
+                        <img id="heroBackImg1" src="images/images.jfif" alt="" class="w-full h-full object-cover opacity-70" />
+                        <div class="absolute inset-0 bg-obsidian/40"></div>
+                    </div>
+
+                    <!-- Front Active Shuffling Hero Card -->
+                    <div onclick="openActiveHeroLook()"
+                         data-cursor="INSPECT"
+                         onmousemove="tiltCard(event, this)"
+                         onmouseleave="resetTilt(this)"
+                         class="editorial-card relative z-10 cursor-pointer rounded-2xl bg-velvet p-3 border border-gold/45 shadow-2xl shadow-black/70">
+                        <div class="sheen-layer"></div>
+
+                        <div class="shuffle-stage aspect-[4/5] rounded-xl overflow-hidden bg-obsidian relative border border-gold/15">
+                            <img id="heroMainImg"
+                                 src="images/bc143362cca7b1fab22eb124262c9d34_b92002b25989.avif"
+                                 alt="The Imperial Agbada in Midnight Navy"
+                                 class="shuffle-image w-full h-full object-cover object-top" />
+
+                            <!-- Subtle Edge Vignette for Text Legibility -->
+                            <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-obsidian/70 to-transparent pointer-events-none"></div>
+                            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-obsidian/85 via-obsidian/30 to-transparent pointer-events-none"></div>
+
+                            <!-- Top Badges -->
+                            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between gap-2 pointer-events-none">
+                                <span id="heroPieceBadge" class="px-3.5 py-1.5 rounded-full bg-obsidian/85 backdrop-blur-md border border-gold/40 text-[10px] tracking-[0.2em] uppercase text-champagne">
+                                    Design N° 01 / 05
+                                </span>
+                                <span id="heroCategoryBadge" class="px-3 py-1.5 rounded-full bg-burgundy/90 backdrop-blur-md border border-gold/30 text-[10px] tracking-[0.16em] uppercase text-ivory">
+                                    Menswear Couture
+                                </span>
+                            </div>
+
+                            <!-- Bottom Live Progress Bar -->
+                            <div class="absolute bottom-0 inset-x-0 h-[3px] bg-ivory/15">
+                                <div id="heroProgressBar" class="h-full w-full origin-left bg-gradient-to-r from-bronze via-gold to-champagne" style="transform: scaleX(0);"></div>
+                            </div>
+                        </div>
+
+                        <!-- Card Caption -->
+                        <div class="pt-4 pb-1.5 px-1.5 flex items-end justify-between gap-3">
+                            <div>
+                                <h2 id="heroPieceTitle" class="font-serif text-2xl text-ivory italic leading-snug">
+                                    The Imperial Agbada in Midnight Navy
+                                </h2>
+                                <p id="heroPieceSwatch" class="text-xs text-sand tracking-wide mt-0.5">
+                                    Three-Piece Royal Agbada · Gold Rosette Embroidery
+                                </p>
+                            </div>
+                            <span class="text-[11px] tracking-[0.18em] uppercase text-gold shrink-0">Inspect →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Thumbnail Queue & Shuffle Controls -->
+                <div class="max-w-md mx-auto mt-5 space-y-3">
+                    <div id="heroThumbs" class="grid grid-cols-5 gap-2">
+                        <!-- Rendered by JS -->
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] tracking-[0.16em] uppercase text-sand">
+                        <div class="flex items-center gap-2">
+                            <button onclick="prevHeroLook()" class="btn-press px-3 py-1.5 rounded-full bg-velvet border border-gold/30 hover:border-gold hover:text-champagne">← Prev</button>
+                            <button onclick="nextHeroLook()" class="btn-press px-3 py-1.5 rounded-full bg-velvet border border-gold/30 hover:border-gold hover:text-champagne">Next →</button>
+                        </div>
+                        <button id="heroPlayBtn" onclick="toggleHeroAutoShuffle()" class="btn-press px-3.5 py-1.5 rounded-full bg-burgundy/50 border border-gold/35 text-champagne hover:border-gold flex items-center gap-2">
+                            <span id="heroPlayDot" class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+                            <span id="heroPlayLabel">Auto-Shuffle: On</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. CURATED 5-STYLE SHUFFLING LOOKBOOK ARCHIVE                         -->
+    <!-- ===================================================================== -->
+    <section id="collection" class="py-24 md:py-32 max-w-7xl mx-auto px-5 md:px-10 border-b border-gold/20">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-8 reveal-up">
+            <div>
+                <p class="text-xs tracking-[0.26em] uppercase text-gold mb-3">01 / Signature Atelier Designs</p>
+                <h2 class="font-serif text-4xl sm:text-6xl text-ivory font-light">
+                    Bespoke <span class="italic gold-text">Silhouettes</span> &amp; Embroidery
+                </h2>
+            </div>
+            <p class="max-w-md text-sm text-sand font-light leading-relaxed">
+                Every garment in the Jarmai collection is individually measured, cut, and finished with hand-guided metallic threadwork, honeycomb plackets, or scalloped lace trims.
+            </p>
+        </div>
+
+        <!-- Category Filters & Live Grid Shuffling Toolbar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-10 mb-12 border-b border-gold/15 reveal-up">
+            <div class="flex flex-wrap items-center gap-2.5" id="filterBar">
+                <button onclick="setCategoryFilter('all')" data-filter="all" class="filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-gold text-obsidian border-gold font-semibold">
+                    All Couture (5)
+                </button>
+                <button onclick="setCategoryFilter('menswear')" data-filter="menswear" class="filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-velvet text-sand border-gold/25 hover:border-gold hover:text-ivory">
+                    Kaftan &amp; Agbada (3)
+                </button>
+                <button onclick="setCategoryFilter('womenswear')" data-filter="womenswear" class="filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-velvet text-sand border-gold/25 hover:border-gold hover:text-ivory">
+                    Womenswear Couture (2)
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="shuffleLookbookGrid()"
+                        data-cursor="SHUFFLE"
+                        class="btn-press px-4 py-2 rounded-full bg-burgundy/65 border border-gold/45 text-champagne hover:bg-gold hover:text-obsidian text-[11px] tracking-[0.18em] uppercase flex items-center gap-2">
+                    <span>Shuffle Gallery</span>
+                    <span aria-hidden="true">↻</span>
+                </button>
+                <button id="gridAutoBtn"
+                        onclick="toggleGridAutoShuffle()"
+                        class="btn-press px-4 py-2 rounded-full bg-velvet border border-gold/30 text-sand hover:border-gold hover:text-champagne text-[11px] tracking-[0.18em] uppercase flex items-center gap-2">
+                    <span id="gridAutoDot" class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+                    <span id="gridAutoLabel">Live Rotate: On</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 5-Piece Dynamic Editorial Grid -->
+        <div id="lookbookGrid" class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-start">
+            <!-- Rendered dynamically by JS -->
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. ATELIER MOTION STUDY & SYNCHRONIZED LOOKBOOK REEL                  -->
+    <!-- ===================================================================== -->
+    <section id="film" class="py-24 md:py-32 bg-velvet/70 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-5 md:px-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 reveal-up">
+                <div>
+                    <p class="text-xs tracking-[0.26em] uppercase text-gold mb-3">02 / Atelier Motion Study</p>
+                    <h2 class="font-serif text-4xl sm:text-6xl text-ivory font-light">
+                        Golden Thread &amp; <span class="italic gold-text">Royal Drape</span>
+                    </h2>
+                </div>
+
+                <!-- Motion, Reel & Ambient Sound Controls -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <button id="filmToggleBtn" onclick="toggleFilmPlay()" class="btn-press px-5 py-2.5 rounded-full bg-obsidian border border-gold/35 hover:border-gold text-champagne text-[11px] tracking-[0.18em] uppercase">
+                        Pause Motion
+                    </button>
+                    <button onclick="shuffleFilmSlide()" class="btn-press px-5 py-2.5 rounded-full bg-burgundy/70 border border-gold/40 hover:border-gold text-champagne text-[11px] tracking-[0.18em] uppercase">
+                        Next Silhouette ↻
+                    </button>
+                    <button id="soundToggleBtn" onclick="toggleAmbientSound()" class="btn-press px-5 py-2.5 rounded-full bg-obsidian border border-gold/35 hover:border-gold text-ivory text-[11px] tracking-[0.18em] uppercase flex items-center gap-2">
+                        <span id="soundDot" class="w-1.5 h-1.5 rounded-full bg-sand"></span>
+                        <span id="soundLabel">Sound: Off</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Living Cinema Stage: Silk Wave Canvas + Shuffling Garment Vignette -->
+            <div class="relative rounded-3xl overflow-hidden border border-gold/30 shadow-2xl min-h-[440px] md:h-[540px] w-full bg-obsidian reveal-up">
+                <canvas id="campaignFilmCanvas" class="absolute inset-0 w-full h-full block"></canvas>
+
+                <div class="relative z-10 h-full grid grid-cols-1 md:grid-cols-12 gap-6 p-6 md:p-10 items-center bg-gradient-to-r from-obsidian/85 via-obsidian/50 to-obsidian/30">
+                    <!-- Left Editorial Quote & Film Metadata -->
+                    <div class="md:col-span-7 flex flex-col justify-between h-full space-y-6">
+                        <div class="flex items-center gap-4 text-[11px] tracking-[0.22em] uppercase text-gold/90">
+                            <span>Jarmai Runway Study — Velvet &amp; Zardozi Light</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-burgundy/80 border border-gold/30 text-champagne" id="filmStatusText">Playing</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <p class="font-serif text-2xl sm:text-4xl md:text-[2.6rem] italic font-light leading-tight text-ivory">
+                                “True tailoring commands presence before a single word is spoken—where heritage geometry meets sculpted modern form.”
+                            </p>
+                            <p class="text-xs tracking-[0.2em] uppercase text-sand">
+                                — Jarmai Fashion Design Atelier
+                            </p>
+                        </div>
+
+                        <div class="flex items-center gap-3 pt-2">
+                            <span class="text-[11px] tracking-[0.18em] uppercase text-sand">Currently Featured:</span>
+                            <span id="filmPieceName" class="font-serif text-xl italic gold-text">The Imperial Agbada in Midnight Navy</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Shuffling Garment Frame -->
+                    <div class="md:col-span-5 flex justify-center md:justify-end">
+                        <div onclick="openFilmLook()"
+                             data-cursor="VIEW PIECE"
+                             class="editorial-card cursor-pointer w-64 sm:w-72 rounded-2xl bg-velvet/95 p-2.5 border border-gold/45 shadow-2xl">
+                            <div class="sheen-layer"></div>
+                            <div class="shuffle-stage aspect-[4/5] rounded-xl overflow-hidden bg-obsidian relative">
+                                <img id="filmLookImg"
+                                     src="images/bc143362cca7b1fab22eb124262c9d34_b92002b25989.avif"
+                                     alt="Featured Atelier Look"
+                                     class="shuffle-image w-full h-full object-cover object-top" />
+                                <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-obsidian/90 via-obsidian/50 to-transparent">
+                                    <span id="filmLookTag" class="text-[10px] tracking-[0.18em] uppercase text-champagne block">Design N° 01</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. ATELIER CRAFTSMANSHIP & ANIMATED GOLD NEEDLEWORK ILLUSTRATION       -->
+    <!-- ===================================================================== -->
+    <section id="philosophy" class="py-24 md:py-32 max-w-7xl mx-auto px-5 md:px-10 border-b border-gold/20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <!-- Left Animated SVG Couture Silhouette, Needle & Diamond Motif -->
+            <div class="lg:col-span-6 reveal-up">
+                <div class="rounded-3xl bg-velvet border border-gold/30 p-8 md:p-12 flex flex-col items-center justify-center relative shadow-xl">
+                    <svg viewBox="0 0 500 380" class="w-full max-w-md h-auto fill-none">
+                        <!-- Architectural Tailoring Guides -->
+                        <line x1="250" y1="24" x2="250" y2="356" stroke="rgba(235, 182, 61, 0.25)" stroke-width="1" stroke-dasharray="4 4" />
+                        <circle cx="250" cy="190" r="136" stroke="rgba(235, 182, 61, 0.22)" stroke-width="1" />
+                        <circle cx="250" cy="190" r="102" stroke="rgba(87, 9, 15, 0.65)" stroke-width="1" stroke-dasharray="3 5" />
+
+                        <!-- Flowing Bespoke Kaftan / Gown Contour -->
+                        <path class="drape-line"
+                              d="M 145 75 C 195 95, 305 95, 355 75 C 340 165, 385 250, 395 330 C 310 315, 190 315, 105 330 C 115 250, 160 165, 145 75 Z"
+                              stroke="#EBB63D" stroke-width="1.8" />
+
+                        <!-- Hand-Guided Placket & Diamond Embroidery Motifs (Logo Heritage) -->
+                        <path class="drape-line"
+                              d="M 192 88 C 215 180, 185 245, 162 320 M 308 88 C 285 180, 315 245, 338 320 M 250 92 L 250 318"
+                              stroke="#F7EFE2" stroke-opacity="0.7" stroke-width="1.15" />
+
+                        <!-- Center Geometric Diamonds -->
+                        <polygon points="250,128 266,144 250,160 234,144" stroke="#EBB63D" stroke-width="1.4" fill="rgba(87, 9, 15, 0.5)" />
+                        <polygon points="250,174 266,190 250,206 234,190" stroke="#F9E18E" stroke-width="1.4" fill="rgba(235, 182, 61, 0.14)" />
+                        <polygon points="250,220 266,236 250,252 234,236" stroke="#EBB63D" stroke-width="1.4" fill="rgba(87, 9, 15, 0.5)" />
+                    </svg>
+                    <div class="mt-5 text-center">
+                        <span class="text-[11px] tracking-[0.22em] uppercase text-gold">
+                            Hand-Guided Zardozi &amp; Chain Embroidery · Custom Pattern Drafting
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Designer Craftsmanship Narrative -->
+            <div class="lg:col-span-6 space-y-6 reveal-up">
+                <p class="text-xs tracking-[0.26em] uppercase text-gold">03 / The Jarmai House Standard</p>
+                <h2 class="font-serif text-4xl sm:text-5xl text-ivory font-light leading-[1.08]">
+                    Precision Needlework, <br/>
+                    <span class="italic gold-text">Tailored for Distinction.</span>
+                </h2>
+                <p class="text-sand text-base md:text-lg font-light leading-relaxed">
+                    Every Jarmai Fashion Design creation begins with exacting measurements and hand-selected cloth—rich cashmere-blend suiting for royal Agbada capes, crisp Egyptian cotton for honeycomb Senator tunics, and vibrant statement Ankara prints structured for modern womenswear.
+                </p>
+                <p class="text-sand/90 text-base font-light leading-relaxed">
+                    Our master tailors reinforce collars, mitre every chest pocket, and finish plackets with interlocking diamond and medallion threadwork so each garment drapes effortlessly and holds its architectural poise for years.
+                </p>
+
+                <!-- 3-Step Bespoke Process Cards -->
+                <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-gold/20">
+                    <div class="p-4 rounded-2xl bg-velvet/80 border border-gold/20">
+                        <span class="text-[10px] tracking-[0.22em] uppercase text-gold block">Step 01</span>
+                        <h3 class="font-serif text-xl text-ivory mt-1">Cloth &amp; Motif</h3>
+                        <p class="text-xs text-sand font-light mt-1 leading-relaxed">Select shade, embroidery motif &amp; scalloped trim.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-velvet/80 border border-gold/20">
+                        <span class="text-[10px] tracking-[0.22em] uppercase text-gold block">Step 02</span>
+                        <h3 class="font-serif text-xl text-ivory mt-1">True Measure</h3>
+                        <p class="text-xs text-sand font-light mt-1 leading-relaxed">In-atelier or guided virtual measurement drafting.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-velvet/80 border border-gold/20">
+                        <span class="text-[10px] tracking-[0.22em] uppercase text-gold block">Step 03</span>
+                        <h3 class="font-serif text-xl text-ivory mt-1">Final Fitting</h3>
+                        <p class="text-xs text-sand font-light mt-1 leading-relaxed">Hand-finished seams &amp; tailored private delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. FOOTER WITH JARMAI LOGO CREST & PRIVATE CONSULTATION CTA           -->
+    <!-- ===================================================================== -->
+    <footer class="py-24 md:py-32 bg-obsidian relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-5 text-center space-y-8 reveal-up relative z-10">
+            <!-- Brand Crest Integration -->
+            <div class="flex items-center justify-center gap-6">
+                <span class="hidden sm:block h-[1px] w-24 bg-gradient-to-r from-transparent to-gold/60"></span>
+                <img src="images/logo.jpeg"
+                     alt="Jarmai Fashion Design Crest"
+                     class="w-52 sm:w-64 h-auto mx-auto logo-blend" />
+                <span class="hidden sm:block h-[1px] w-24 bg-gradient-to-l from-transparent to-gold/60"></span>
+            </div>
+
+            <p class="text-xs tracking-[0.28em] uppercase text-gold">Bespoke Menswear · Womenswear Couture · Event Commissions</p>
+
+            <h2 class="font-serif text-4xl sm:text-6xl text-ivory font-light leading-[1.04]">
+                Commission Your Next <br/>
+                <span class="italic gold-text">Signature Silhouette.</span>
+            </h2>
+
+            <p class="max-w-md mx-auto text-sand text-base font-light leading-relaxed">
+                Private fittings, custom embroidery palettes, and bespoke bridal or ceremonial commissions are available by appointment.
+            </p>
+
+            <div class="pt-2 flex flex-wrap justify-center gap-4">
+                <button onclick="openBookingModal()"
+                        data-cursor="BOOK SALON"
+                        class="btn-press px-10 py-4 rounded-full bg-gradient-to-r from-champagne via-gold to-bronze text-obsidian text-xs tracking-[0.22em] uppercase font-semibold shadow-lg shadow-gold/15 hover:brightness-105">
+                    Request Private Consultation
+                </button>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-5 md:px-10 mt-20 pt-8 border-t border-gold/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-sand tracking-[0.2em] uppercase">
+            <span>© 2026 JARMAI FASHION DESIGN</span>
+            <span>Bespoke Tailoring · Agbada · Kaftan · Ankara Couture</span>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- QUICK-VIEW GARMENT MODAL (WITH PREV/NEXT & TAILORING OPTIONS)         -->
+    <!-- ===================================================================== -->
+    <div id="lookModal" class="modal-backdrop fixed inset-0 z-50 hidden bg-obsidian/85 backdrop-blur-md flex items-center justify-center p-4 md:p-8">
+        <div class="modal-panel bg-velvet border border-gold/40 rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl grid grid-cols-1 md:grid-cols-12">
+            <!-- Modal Image Column -->
+            <div class="md:col-span-6 bg-obsidian relative aspect-[4/5] md:aspect-auto md:min-h-[500px]">
+                <img id="modalImg" src="" alt="Garment Detail" class="w-full h-full object-cover object-top" />
+                <div class="absolute bottom-4 inset-x-4 flex items-center justify-between gap-2">
+                    <button onclick="stepLookModal(-1)" class="btn-press px-3.5 py-2 rounded-full bg-obsidian/85 backdrop-blur-md border border-gold/40 text-[10px] tracking-[0.18em] uppercase text-champagne hover:bg-burgundy">
+                        ← Prev Design
+                    </button>
+                    <button onclick="stepLookModal(1)" class="btn-press px-3.5 py-2 rounded-full bg-obsidian/85 backdrop-blur-md border border-gold/40 text-[10px] tracking-[0.18em] uppercase text-champagne hover:bg-burgundy">
+                        Next Design →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Details Column -->
+            <div class="md:col-span-6 p-7 md:p-10 flex flex-col justify-between space-y-6">
+                <div>
+                    <div class="flex items-center justify-between gap-2">
+                        <span id="modalBadge" class="text-[11px] tracking-[0.22em] uppercase text-gold">Design N° 01</span>
+                        <button onclick="closeLookModal()" class="btn-press px-3 py-1 rounded-full border border-gold/25 text-[11px] tracking-widest uppercase text-sand hover:text-ivory hover:border-gold">Close ✕</button>
+                    </div>
+                    <h3 id="modalTitle" class="font-serif text-3xl md:text-4xl text-ivory mt-3 font-light leading-tight"></h3>
+                    <p id="modalMaterial" class="text-[11px] tracking-[0.18em] uppercase text-champagne mt-2"></p>
+                    <p id="modalDesc" class="text-sand text-sm leading-relaxed font-light mt-5"></p>
+
+                    <!-- Craft Highlights -->
+                    <div class="mt-5 pt-4 border-t border-gold/15">
+                        <p class="text-[10px] tracking-[0.22em] uppercase text-gold mb-2">Atelier Tailoring Notes</p>
+                        <p id="modalNotes" class="text-xs text-ivory/90 font-light leading-relaxed"></p>
+                    </div>
+
+                    <!-- Tailoring Tier Selector -->
+                    <div class="mt-5 pt-4 border-t border-gold/15 space-y-2">
+                        <label for="modalTierSelect" class="block text-[10px] tracking-[0.22em] uppercase text-gold">Select Commission Option</label>
+                        <select id="modalTierSelect" class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-gold/30 text-xs text-ivory focus:outline-none focus:border-gold">
+                            <option value="Full Bespoke Made-to-Measure">Full Bespoke Made-to-Measure (Signature Palette)</option>
+                            <option value="Custom Fabric Shade &amp; Embroidery">Custom Fabric Shade &amp; Gold/Contrast Embroidery</option>
+                            <option value="Ceremonial / Group Ensemble">Ceremonial / Groom &amp; Bridal Party Ensemble</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gold/20 flex items-center justify-between text-sm">
+                        <span class="text-sand">Craftsmanship Tier</span>
+                        <span id="modalPrice" class="font-serif text-xl italic gold-text"></span>
+                    </div>
+                </div>
+
+                <button onclick="reserveThisPiece()" class="btn-press w-full py-4 rounded-full bg-gradient-to-r from-champagne via-gold to-bronze text-obsidian text-xs tracking-[0.2em] uppercase font-semibold hover:brightness-105">
+                    Reserve Design for Private Fitting
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- PRIVATE CONSULTATION BOOKING MODAL                                    -->
+    <!-- ===================================================================== -->
+    <div id="bookingModal" class="modal-backdrop fixed inset-0 z-50 hidden bg-obsidian/85 backdrop-blur-md flex items-center justify-center p-4 md:p-8">
+        <div class="modal-panel bg-velvet border border-gold/40 rounded-3xl max-w-xl w-full p-7 md:p-10 shadow-2xl space-y-6">
+            <div class="flex items-center justify-between border-b border-gold/20 pb-4">
+                <div>
+                    <p class="text-[10px] tracking-[0.24em] uppercase text-gold">Jarmai Private Concierge</p>
+                    <h3 class="font-serif text-3xl text-ivory font-light">Book a Bespoke Fitting</h3>
+                </div>
+                <button onclick="closeBookingModal()" class="btn-press px-3 py-1 rounded-full border border-gold/25 text-[11px] tracking-widest uppercase text-sand hover:text-ivory hover:border-gold">Close ✕</button>
+            </div>
+
+            <form id="bookingForm" onsubmit="submitFitting(event)" class="space-y-4">
+                <div>
+                    <label for="guestName" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5">Full Name</label>
+                    <input id="guestName" type="text" required placeholder="e.g. Amina Bello or Tunde Adeyemi" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory placeholder:text-sand/45 focus:outline-none focus:border-gold" />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="guestSalon" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5">Consultation Format</label>
+                        <select id="guestSalon" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory focus:outline-none focus:border-gold">
+                            <option value="In-Atelier Private Fitting">In-Atelier Private Fitting</option>
+                            <option value="Virtual Measurement Session">Virtual Measurement Session</option>
+                            <option value="Event / Ceremonial Commission">Event / Ceremonial Commission</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="guestDate" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5">Preferred Date</label>
+                        <input id="guestDate" type="date" required value="2026-11-24" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory focus:outline-none focus:border-gold" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="guestPiece" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5">Selected Style / Design</label>
+                    <select id="guestPiece" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory focus:outline-none focus:border-gold">
+                        <!-- Options synced from PIECES -->
+                    </select>
+                </div>
+
+                <div>
+                    <label for="guestNotes" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5">Colorway or Measurement Notes (Optional)</label>
+                    <input id="guestNotes" type="text" placeholder="Preferred fabric shade, event date, or custom embroidery request" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory placeholder:text-sand/45 focus:outline-none focus:border-gold" />
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="btn-press w-full py-4 rounded-full bg-gradient-to-r from-champagne via-gold to-bronze text-obsidian text-xs tracking-[0.2em] uppercase font-semibold hover:brightness-105">
+                        Confirm Bespoke Appointment
+                    </button>
+                </div>
+            </form>
+
+            <div id="bookingSuccess" class="hidden p-6 rounded-2xl bg-obsidian border border-gold/40 text-center space-y-2.5">
+                <p class="text-xs tracking-[0.22em] uppercase text-gold">✓ Atelier Appointment Registered</p>
+                <p id="bookingSummary" class="font-serif text-2xl text-ivory"></p>
+                <p id="bookingRef" class="text-[11px] tracking-[0.2em] uppercase text-champagne"></p>
+                <p class="text-xs text-sand font-light">Our Master Tailor at Jarmai Fashion Design will prepare fabric swatches and embroidery samples ahead of your session.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- INTERACTIVE SCRIPTS: SHUFFLING DECKS, GALLERY, 3D SILK & MODALS       -->
+    <!-- ===================================================================== -->
+    <script>
+        /* 1. JARMAI FASHION DESIGN — ALL 5 REAL GARMENT STYLES */
+        const PIECES = [
+            {
+                id: 0,
+                badge: "Design N° 01",
+                category: "menswear",
+                categoryLabel: "Menswear Couture",
+                title: "The Imperial Agbada in Midnight Navy",
+                swatch: "Three-Piece Royal Agbada · Gold Rosette Embroidery",
+                tier: "Ceremonial Bespoke",
+                img: "images/bc143362cca7b1fab22eb124262c9d34_b92002b25989.avif",
+                desc: "Commanding midnight-navy grand Agbada anchored by an asymmetric diagonal chest panel with intricate gold-thread medallion embroidery, woven champagne-gold framing, and subtle beaded trim.",
+                notes: "Includes flowing embroidered outer gown, tailored inner tunic, and matching drawstring trousers."
+            },
+            {
+                id: 1,
+                badge: "Design N° 02",
+                category: "womenswear",
+                categoryLabel: "Womenswear Couture",
+                title: "Botanical Peplum Ankara Gown",
+                swatch: "Sculpted Wax Couture · Flared Bell Sleeves",
+                tier: "Signature Couture",
+                img: "images/images.jfif",
+                desc: "Architectural womenswear couture in crimson, obsidian, and ivory botanical wax print—featuring layered shoulder flounces, a cinched waist wrap, and dramatic flared bell sleeves.",
+                notes: "Tailored with an internal structured bodice, breathable cotton-silk lining, and hand-balanced print alignment."
+            },
+            {
+                id: 2,
+                badge: "Design N° 03",
+                category: "menswear",
+                categoryLabel: "Menswear Couture",
+                title: "Forest Olive Diamond-Placket Kaftan",
+                swatch: "Fine Wool-Blend Senator · Geometric Zardozi Trim",
+                tier: "Atelier Tailored",
+                img: "images/1.jpg",
+                desc: "Precision-cut mandarin-collar Senator tunic in deep forest olive, accented down the center placket with hand-guided emerald and gold diamond lattice embroidery and brass stud closures.",
+                notes: "Reinforced structured collar stand, mitred chest pocket, and tailored ankle-tapered trousers."
+            },
+            {
+                id: 3,
+                badge: "Design N° 04",
+                category: "womenswear",
+                categoryLabel: "Womenswear Couture",
+                title: "Ochre Starburst Grand Boubou",
+                swatch: "Silk-Cotton Kaftan · Scalloped Navy Lace Trim",
+                tier: "Royal Resort Couture",
+                img: "images/images%20(1).jfif",
+                desc: "Fluid floor-sweeping kaftan boubou radiating amber-ochre and ivory starburst motifs, crowned with a hand-beaded indigo neckline yoke and scalloped eyelet lace butterfly sleeves.",
+                notes: "Cut for graceful airflow and effortless occasion wear, with custom sleeve length & matching headscarf option."
+            },
+            {
+                id: 4,
+                badge: "Design N° 05",
+                category: "menswear",
+                categoryLabel: "Menswear Couture",
+                title: "Alabaster Honeycomb Senator Tunic",
+                swatch: "Crisp Egyptian Cotton · Contrast Chain Stitch",
+                tier: "Atelier Tailored",
+                img: "images/babfd419c5b6c75976b4c8feab64af27.jpg",
+                desc: "Immaculately pressed ivory-white tailored kaftan featuring razor-sharp black geometric honeycomb chain embroidery tracing the mandarin neckline, elongated placket, and pocket edge.",
+                notes: "Double-stitched French seams, crisp wrinkle-resistant cotton weave, and concealed side vents."
+            }
+        ];
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* 2. HERO SHUFFLING DECK STATE & CONTROLS */
+        let heroIndex = 0;
+        let heroAutoShuffle = !prefersReducedMotion;
+        let heroPausedByHover = false;
+        let heroTimer = null;
+        const HERO_INTERVAL_MS = 4500;
+        let heroProgressFrame = null;
+        let heroProgressStart = performance.now();
+
+        function renderHeroThumbs() {
+            const container = document.getElementById('heroThumbs');
+            if (!container) return;
+            container.innerHTML = PIECES.map((piece, idx) => `
+                <button onclick="jumpHeroLook(${idx})"
+                        aria-label="Preview ${piece.title}"
+                        class="btn-press group relative aspect-square rounded-xl overflow-hidden border transition-all duration-200 ${idx === heroIndex ? 'border-gold ring-2 ring-gold/40 scale-[1.03]' : 'border-gold/25 opacity-60 hover:opacity-100 hover:border-gold/60'}">
+                    <img src="${piece.img}" alt="${piece.title}" class="w-full h-full object-cover object-top" />
+                </button>
+            `).join('');
+        }
+
+        function updateHeroDeck(targetIdx, animateSwap = true) {
+            const total = PIECES.length;
+            heroIndex = ((targetIdx % total) + total) % total;
+            const current = PIECES[heroIndex];
+            const next1 = PIECES[(heroIndex + 1) % total];
+            const next2 = PIECES[(heroIndex + 2) % total];
+
+            const mainImg = document.getElementById('heroMainImg');
+            const backImg1 = document.getElementById('heroBackImg1');
+            const backImg2 = document.getElementById('heroBackImg2');
+
+            if (animateSwap && mainImg) {
+                mainImg.classList.add('is-swapping');
+                mainImg.classList.remove('ken-burns');
+                setTimeout(() => {
+                    mainImg.src = current.img;
+                    mainImg.alt = current.title;
+                    if (backImg1) backImg1.src = next1.img;
+                    if (backImg2) backImg2.src = next2.img;
+
+                    document.getElementById('heroPieceBadge').textContent = `Design N° 0${heroIndex + 1} / 0${total}`;
+                    document.getElementById('heroCategoryBadge').textContent = current.categoryLabel;
+                    document.getElementById('heroPieceTitle').textContent = current.title;
+                    document.getElementById('heroPieceSwatch').textContent = current.swatch;
+
+                    requestAnimationFrame(() => {
+                        mainImg.classList.remove('is-swapping');
+                        if (!prefersReducedMotion) mainImg.classList.add('ken-burns');
+                    });
+                }, 200);
+            } else if (mainImg) {
+                mainImg.src = current.img;
+                mainImg.alt = current.title;
+                if (backImg1) backImg1.src = next1.img;
+                if (backImg2) backImg2.src = next2.img;
+                document.getElementById('heroPieceBadge').textContent = `Design N° 0${heroIndex + 1} / 0${total}`;
+                document.getElementById('heroCategoryBadge').textContent = current.categoryLabel;
+                document.getElementById('heroPieceTitle').textContent = current.title;
+                document.getElementById('heroPieceSwatch').textContent = current.swatch;
+                if (!prefersReducedMotion) mainImg.classList.add('ken-burns');
+            }
+
+            heroProgressStart = performance.now();
+            renderHeroThumbs();
+        }
+
+        function nextHeroLook() {
+            updateHeroDeck(heroIndex + 1, true);
+        }
+
+        function prevHeroLook() {
+            updateHeroDeck(heroIndex - 1, true);
+        }
+
+        function jumpHeroLook(idx) {
+            updateHeroDeck(idx, true);
+        }
+
+        function shuffleHeroNext() {
+            let randomIdx = Math.floor(Math.random() * PIECES.length);
+            if (randomIdx === heroIndex) randomIdx = (heroIndex + 1) % PIECES.length;
+            updateHeroDeck(randomIdx, true);
+        }
+
+        function openActiveHeroLook() {
+            openLookModal(PIECES[heroIndex].id);
+        }
+
+        function pauseHeroShuffle(paused) {
+            heroPausedByHover = paused;
+            if (!paused) heroProgressStart = performance.now();
+        }
+
+        function toggleHeroAutoShuffle() {
+            heroAutoShuffle = !heroAutoShuffle;
+            heroProgressStart = performance.now();
+            const label = document.getElementById('heroPlayLabel');
+            const dot = document.getElementById('heroPlayDot');
+            if (label) label.textContent = `Auto-Shuffle: ${heroAutoShuffle ? 'On' : 'Off'}`;
+            if (dot) dot.className = heroAutoShuffle
+                ? 'w-1.5 h-1.5 rounded-full bg-gold animate-pulse'
+                : 'w-1.5 h-1.5 rounded-full bg-sand';
+            if (!heroAutoShuffle) {
+                const bar = document.getElementById('heroProgressBar');
+                if (bar) bar.style.transform = 'scaleX(0)';
+            }
+        }
+
+        function tickHeroProgress(now) {
+            const bar = document.getElementById('heroProgressBar');
+            if (heroAutoShuffle && !heroPausedByHover && !isAnyModalOpen()) {
+                const elapsed = now - heroProgressStart;
+                const ratio = Math.min(elapsed / HERO_INTERVAL_MS, 1);
+                if (bar) bar.style.transform = `scaleX(${ratio})`;
+                if (elapsed >= HERO_INTERVAL_MS) {
+                    heroProgressStart = now;
+                    nextHeroLook();
+                }
+            }
+            heroProgressFrame = requestAnimationFrame(tickHeroProgress);
+        }
+
+        /* 3. LOOKBOOK COLLECTION FILTERING & GRID SHUFFLING */
+        let currentFilter = 'all';
+        let lookbookOrder = [...PIECES];
+        let gridAutoShuffle = !prefersReducedMotion;
+        let gridAutoTimer = null;
+
+        function getLayoutClasses(index, total) {
+            if (total === 5) {
+                const layouts = [
+                    { col: 'md:col-span-7', aspect: 'aspect-[5/4]' },
+                    { col: 'md:col-span-5 md:mt-14', aspect: 'aspect-[4/5]' },
+                    { col: 'md:col-span-4', aspect: 'aspect-[4/5]' },
+                    { col: 'md:col-span-4 md:mt-10', aspect: 'aspect-[4/5]' },
+                    { col: 'md:col-span-4', aspect: 'aspect-[4/5]' }
+                ];
+                return layouts[index] || { col: 'md:col-span-4', aspect: 'aspect-[4/5]' };
+            }
+            if (total === 3) {
+                return { col: 'md:col-span-4', aspect: 'aspect-[4/5]' };
+            }
+            if (total === 2) {
+                return { col: 'md:col-span-6', aspect: 'aspect-[4/5]' };
+            }
+            return { col: 'md:col-span-6 md:col-start-4', aspect: 'aspect-[4/5]' };
+        }
+
+        function renderLookbook(animateShuffle = false) {
+            const container = document.getElementById('lookbookGrid');
+            if (!container) return;
+
+            const filtered = currentFilter === 'all'
+                ? lookbookOrder
+                : lookbookOrder.filter(item => item.category === currentFilter);
+
+            const drawCards = () => {
+                container.innerHTML = filtered.map((piece, idx) => {
+                    const layout = getLayoutClasses(idx, filtered.length);
+                    return `
+                        <article onclick="openLookModal(${piece.id})"
+                                 data-cursor="INSPECT"
+                                 class="grid-card-item ${layout.col} group cursor-pointer">
+                            <div onmousemove="tiltCard(event, this)"
+                                 onmouseleave="resetTilt(this)"
+                                 class="editorial-card rounded-2xl bg-velvet p-3 border border-gold/30 shadow-lg hover:shadow-2xl hover:shadow-gold/10 ${layout.aspect} relative">
+                                <div class="sheen-layer"></div>
+                                <div class="w-full h-full rounded-xl overflow-hidden bg-obsidian relative border border-gold/15">
+                                    <img src="${piece.img}"
+                                         alt="${piece.title}"
+                                         class="w-full h-full object-cover object-top" />
+                                    <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-obsidian/80 to-transparent pointer-events-none"></div>
+                                    <div class="absolute bottom-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
+                                        <span class="px-3 py-1 rounded-full bg-obsidian/85 backdrop-blur-md border border-gold/35 text-[10px] tracking-[0.15em] uppercase text-champagne truncate">
+                                            ${piece.swatch}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 px-1 flex items-baseline justify-between gap-4">
+                                <div>
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="text-[11px] tracking-[0.2em] uppercase text-gold">${piece.badge}</span>
+                                        <span class="text-[10px] tracking-[0.16em] uppercase text-sand/75">· ${piece.categoryLabel}</span>
+                                    </div>
+                                    <h3 class="font-serif text-2xl sm:text-3xl text-ivory font-light group-hover:text-champagne group-hover:italic transition-all mt-0.5">${piece.title}</h3>
+                                </div>
+                                <span class="font-serif text-base italic text-gold shrink-0">${piece.tier}</span>
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            };
+
+            if (animateShuffle && !prefersReducedMotion) {
+                const existing = container.querySelectorAll('.grid-card-item');
+                existing.forEach(el => el.classList.add('shuffling-out'));
+                setTimeout(() => {
+                    drawCards();
+                }, 220);
+            } else {
+                drawCards();
+            }
+        }
+
+        function setCategoryFilter(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                const active = btn.getAttribute('data-filter') === filter;
+                btn.className = active
+                    ? 'filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-gold text-obsidian border-gold font-semibold'
+                    : 'filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-velvet text-sand border-gold/25 hover:border-gold hover:text-ivory';
+            });
+            renderLookbook(true);
+        }
+
+        function shuffleLookbookGrid() {
+            const arr = [...lookbookOrder];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            // Guarantee visual movement even on small filtered subsets
+            if (arr.length > 1 && arr[0].id === lookbookOrder[0].id) {
+                const first = arr.shift();
+                arr.push(first);
+            }
+            lookbookOrder = arr;
+            renderLookbook(true);
+        }
+
+        function rotateLookbookOrder() {
+            const arr = [...lookbookOrder];
+            const first = arr.shift();
+            arr.push(first);
+            lookbookOrder = arr;
+            renderLookbook(true);
+        }
+
+        function toggleGridAutoShuffle() {
+            gridAutoShuffle = !gridAutoShuffle;
+            document.getElementById('gridAutoLabel').textContent = `Live Rotate: ${gridAutoShuffle ? 'On' : 'Off'}`;
+            document.getElementById('gridAutoDot').className = gridAutoShuffle
+                ? 'w-1.5 h-1.5 rounded-full bg-gold animate-pulse'
+                : 'w-1.5 h-1.5 rounded-full bg-sand';
+            setupGridAutoTimer();
+        }
+
+        function setupGridAutoTimer() {
+            if (gridAutoTimer) clearInterval(gridAutoTimer);
+            if (!gridAutoShuffle) return;
+            gridAutoTimer = setInterval(() => {
+                const grid = document.getElementById('lookbookGrid');
+                const hovered = grid && grid.matches(':hover');
+                if (!hovered && !isAnyModalOpen() && !document.hidden) {
+                    rotateLookbookOrder();
+                }
+            }, 8500);
+        }
+
+        /* 4. 3D GENTLE CARD TILT & GOLDEN SPECULAR SHEEN */
+        function tiltCard(e, el) {
+            if (prefersReducedMotion || window.matchMedia('(pointer: coarse)').matches) return;
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            el.style.setProperty('--mx', `${x}px`);
+            el.style.setProperty('--my', `${y}px`);
+            const rx = ((y / rect.height) - 0.5) * -4.5;
+            const ry = ((x / rect.width) - 0.5) * 4.5;
+            el.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+        }
+
+        function resetTilt(el) {
+            el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+        }
+
+        /* 5. CUSTOM MAGNETIC CURSOR FOLLOWER */
+        const follower = document.getElementById('cursorFollower');
+        const cursorText = document.getElementById('cursorText');
+        let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+        let fx = mx, fy = my;
+
+        window.addEventListener('mousemove', (e) => {
+            mx = e.clientX;
+            my = e.clientY;
+            const target = e.target.closest('[data-cursor]');
+            if (target && follower) {
+                follower.classList.add('active');
+                cursorText.textContent = target.getAttribute('data-cursor');
+                cursorText.style.opacity = '1';
+            } else if (follower) {
+                follower.classList.remove('active');
+                cursorText.style.opacity = '0';
+            }
+        });
+
+        function updateCursor() {
+            fx += (mx - fx) * 0.16;
+            fy += (my - fy) * 0.16;
+            if (follower) {
+                follower.style.left = `${fx}px`;
+                follower.style.top = `${fy}px`;
+            }
+            requestAnimationFrame(updateCursor);
+        }
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            updateCursor();
+        }
+
+        /* 6. THREE.JS FLOWING GOLD-SHOT BURGUNDY SILK RIBBON IN HERO */
+        function initHeroSilk() {
+            const canvas = document.getElementById('silkHeroCanvas');
+            if (!canvas || typeof THREE === 'undefined' || prefersReducedMotion) return;
+
+            const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(40, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
+            camera.position.set(0, 0, 5.5);
+
+            scene.add(new THREE.AmbientLight(0x57090F, 1.4));
+            const goldLight = new THREE.DirectionalLight(0xF9E18E, 1.8);
+            goldLight.position.set(3, 4, 3);
+            scene.add(goldLight);
+
+            const crimsonLight = new THREE.DirectionalLight(0x8C1420, 1.2);
+            crimsonLight.position.set(-4, -2, 2);
+            scene.add(crimsonLight);
+
+            const geo = new THREE.PlaneGeometry(9.5, 4.4, 72, 44);
+            const mat = new THREE.MeshPhysicalMaterial({
+                color: 0x4A0912,
+                emissive: 0x1D0308,
+                roughness: 0.28,
+                metalness: 0.55,
+                clearcoat: 0.5,
+                side: THREE.DoubleSide
+            });
+
+            const ribbon = new THREE.Mesh(geo, mat);
+            ribbon.rotation.x = -0.28;
+            ribbon.rotation.z = -0.09;
+            scene.add(ribbon);
+
+            function resize() {
+                if (!canvas.clientWidth) return;
+                renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            const clock = new THREE.Clock();
+            function animate() {
+                const t = clock.getElapsedTime() * 0.55;
+                const pos = geo.attributes.position;
+                for (let i = 0; i < pos.count; i++) {
+                    const x = pos.getX(i);
+                    const y = pos.getY(i);
+                    const z = Math.sin(x * 0.85 + t) * 0.28 + Math.cos(y * 1.15 + t * 0.8) * 0.16;
+                    pos.setZ(i, z);
+                }
+                pos.needsUpdate = true;
+                geo.computeVertexNormals();
+                renderer.render(scene, camera);
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        /* 7. CAMPAIGN MOTION SHOWCASE + SYNCHRONIZED SHUFFLING REEL */
+        let filmPlaying = !prefersReducedMotion;
+        let filmTime = 0;
+        let filmSlideIdx = 0;
+        let filmSlideTimer = null;
+
+        function shuffleFilmSlide(idxOverride = null) {
+            filmSlideIdx = idxOverride !== null ? idxOverride : (filmSlideIdx + 1) % PIECES.length;
+            const piece = PIECES[filmSlideIdx];
+            const img = document.getElementById('filmLookImg');
+            const name = document.getElementById('filmPieceName');
+            const tag = document.getElementById('filmLookTag');
+
+            if (img) {
+                img.classList.add('is-swapping');
+                setTimeout(() => {
+                    img.src = piece.img;
+                    img.alt = piece.title;
+                    if (name) name.textContent = piece.title;
+                    if (tag) tag.textContent = `${piece.badge} · ${piece.categoryLabel}`;
+                    requestAnimationFrame(() => img.classList.remove('is-swapping'));
+                }, 190);
+            }
+        }
+
+        function openFilmLook() {
+            openLookModal(PIECES[filmSlideIdx].id);
+        }
+
+        function initCampaignFilm() {
+            const canvas = document.getElementById('campaignFilmCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            function resize() {
+                canvas.width = canvas.clientWidth || 960;
+                canvas.height = canvas.clientHeight || 540;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            function draw() {
+                if (filmPlaying) filmTime += 0.015;
+                const w = canvas.width;
+                const h = canvas.height;
+
+                const grad = ctx.createLinearGradient(0, 0, w, h);
+                grad.addColorStop(0, '#110106');
+                grad.addColorStop(0.55, '#26060D');
+                grad.addColorStop(1, '#420812');
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, w, h);
+
+                // Flowing Golden Zardozi Threads & Velvet Silk Curves
+                for (let i = 0; i < 20; i++) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = i % 4 === 0
+                        ? 'rgba(235, 182, 61, 0.34)'
+                        : 'rgba(249, 225, 142, 0.11)';
+                    ctx.lineWidth = i % 4 === 0 ? 1.6 : 1.0;
+                    for (let x = 0; x <= w; x += 18) {
+                        const y = h * 0.52
+                            + Math.sin(x * 0.0048 + filmTime + i * 0.2) * (52 + i * 3.4)
+                            + Math.cos(x * 0.009 - filmTime * 0.65) * 22;
+                        if (x === 0) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    ctx.stroke();
+                }
+
+                requestAnimationFrame(draw);
+            }
+            draw();
+
+            if (filmSlideTimer) clearInterval(filmSlideTimer);
+            filmSlideTimer = setInterval(() => {
+                if (filmPlaying && !isAnyModalOpen() && !document.hidden) {
+                    shuffleFilmSlide();
+                }
+            }, 5200);
+        }
+
+        function toggleFilmPlay() {
+            filmPlaying = !filmPlaying;
+            document.getElementById('filmToggleBtn').textContent = filmPlaying ? 'Pause Motion' : 'Resume Motion';
+            document.getElementById('filmStatusText').textContent = filmPlaying ? 'Playing' : 'Paused';
+        }
+
+        // Gentle Web Audio API Warm Chord (C3 + G3 + D4)
+        let audioCtx = null;
+        let soundOn = false;
+        let masterGain = null;
+
+        function toggleAmbientSound() {
+            if (!audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                audioCtx = new AudioContext();
+                const osc1 = audioCtx.createOscillator();
+                const osc2 = audioCtx.createOscillator();
+                const osc3 = audioCtx.createOscillator();
+                osc1.type = 'sine';
+                osc2.type = 'triangle';
+                osc3.type = 'sine';
+                osc1.frequency.value = 130.81; // C3
+                osc2.frequency.value = 196.00; // G3
+                osc3.frequency.value = 293.66; // D4
+
+                const filter = audioCtx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.value = 260;
+
+                masterGain = audioCtx.createGain();
+                masterGain.gain.value = 0.03;
+
+                osc1.connect(filter);
+                osc2.connect(filter);
+                osc3.connect(filter);
+                filter.connect(masterGain);
+                masterGain.connect(audioCtx.destination);
+                osc1.start();
+                osc2.start();
+                osc3.start();
+                soundOn = true;
+            } else {
+                if (soundOn) {
+                    masterGain.gain.setTargetAtTime(0.0001, audioCtx.currentTime, 0.25);
+                    soundOn = false;
+                } else {
+                    audioCtx.resume();
+                    masterGain.gain.setTargetAtTime(0.03, audioCtx.currentTime, 0.25);
+                    soundOn = true;
+                }
+            }
+            document.getElementById('soundLabel').textContent = `Sound: ${soundOn ? 'On' : 'Off'}`;
+            document.getElementById('soundDot').className = soundOn
+                ? 'w-1.5 h-1.5 rounded-full bg-gold animate-ping'
+                : 'w-1.5 h-1.5 rounded-full bg-sand';
+        }
+
+        /* 8. MODALS, MOBILE MENU & SCROLL REVEAL */
+        let currentModalPieceId = PIECES[0].id;
+
+        function isAnyModalOpen() {
+            const lookOpen = !document.getElementById('lookModal').classList.contains('hidden');
+            const bookOpen = !document.getElementById('bookingModal').classList.contains('hidden');
+            return lookOpen || bookOpen;
+        }
+
+        function syncBodyScrollLock() {
+            document.body.style.overflow = isAnyModalOpen() ? 'hidden' : '';
+        }
+
+        function populatePieceOptions() {
+            const select = document.getElementById('guestPiece');
+            if (!select) return;
+            select.innerHTML = PIECES.map(p => `<option value="${p.title}">${p.badge} — ${p.title}</option>`).join('') +
+                `<option value="Custom Bespoke Commission">Custom Bespoke Commission (New Design)</option>`;
+        }
+
+        function openLookModal(id) {
+            const idx = PIECES.findIndex(item => item.id === id);
+            const p = idx >= 0 ? PIECES[idx] : PIECES[0];
+            currentModalPieceId = p.id;
+
+            document.getElementById('modalImg').src = p.img;
+            document.getElementById('modalImg').alt = p.title;
+            document.getElementById('modalBadge').textContent = `${p.badge} · ${p.categoryLabel}`;
+            document.getElementById('modalTitle').textContent = p.title;
+            document.getElementById('modalMaterial').textContent = p.swatch;
+            document.getElementById('modalDesc').textContent = p.desc;
+            document.getElementById('modalNotes').textContent = p.notes;
+            document.getElementById('modalPrice').textContent = p.tier;
+
+            const modal = document.getElementById('lookModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('is-entering');
+            syncBodyScrollLock();
+            requestAnimationFrame(() => modal.classList.remove('is-entering'));
+        }
+
+        function stepLookModal(direction) {
+            const idx = PIECES.findIndex(item => item.id === currentModalPieceId);
+            const nextIdx = ((idx + direction) + PIECES.length) % PIECES.length;
+            openLookModal(PIECES[nextIdx].id);
+        }
+
+        function closeLookModal() {
+            document.getElementById('lookModal').classList.add('hidden');
+            syncBodyScrollLock();
+        }
+
+        function reserveThisPiece() {
+            const selectedPiece = PIECES.find(p => p.id === currentModalPieceId) || PIECES[0];
+            const tierVal = document.getElementById('modalTierSelect').value;
+            closeLookModal();
+            openBookingModal(selectedPiece.title, tierVal);
+        }
+
+        function openBookingModal(pieceTitle = null, notePrefill = '') {
+            document.getElementById('bookingSuccess').classList.add('hidden');
+            document.getElementById('bookingForm').classList.remove('hidden');
+            if (pieceTitle) {
+                document.getElementById('guestPiece').value = pieceTitle;
+            }
+            if (notePrefill) {
+                document.getElementById('guestNotes').value = notePrefill;
+            }
+            const modal = document.getElementById('bookingModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('is-entering');
+            syncBodyScrollLock();
+            requestAnimationFrame(() => modal.classList.remove('is-entering'));
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+            syncBodyScrollLock();
+        }
+
+        function submitFitting(e) {
+            e.preventDefault();
+            const name = document.getElementById('guestName').value.trim();
+            const salon = document.getElementById('guestSalon').value;
+            const date = document.getElementById('guestDate').value;
+            const piece = document.getElementById('guestPiece').value;
+            const refCode = 'JFD-' + Math.floor(1000 + Math.random() * 9000);
+
+            document.getElementById('bookingForm').classList.add('hidden');
+            document.getElementById('bookingSummary').textContent = `${name} — ${piece}`;
+            document.getElementById('bookingRef').textContent = `${salon} · ${date} · Ref ${refCode}`;
+            document.getElementById('bookingSuccess').classList.remove('hidden');
+        }
+
+        /* Mobile Drawer */
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobileDrawer');
+            const openIcon = document.getElementById('menuIconOpen');
+            const closeIcon = document.getElementById('menuIconClose');
+            const btn = document.getElementById('mobileMenuBtn');
+            const isHidden = drawer.classList.contains('hidden');
+            drawer.classList.toggle('hidden', !isHidden);
+            openIcon.classList.toggle('hidden', isHidden);
+            closeIcon.classList.toggle('hidden', !isHidden);
+            btn.setAttribute('aria-expanded', String(isHidden));
+        }
+
+        function closeMobileMenu() {
+            const drawer = document.getElementById('mobileDrawer');
+            if (!drawer.classList.contains('hidden')) toggleMobileMenu();
+        }
+
+        /* Scroll Reveal */
+        function observeReveals() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+        }
+
+        /* Close Modals on Backdrop Click or Escape */
+        document.getElementById('lookModal').addEventListener('click', (e) => {
+            if (e.target.id === 'lookModal') closeLookModal();
+        });
+        document.getElementById('bookingModal').addEventListener('click', (e) => {
+            if (e.target.id === 'bookingModal') closeBookingModal();
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLookModal();
+                closeBookingModal();
+                closeMobileMenu();
+            }
+        });
+
+        /* Boot Sequence */
+        window.onload = function () {
+            PIECES.forEach(p => {
+                const preload = new Image();
+                preload.src = p.img;
+            });
+            populatePieceOptions();
+            updateHeroDeck(0, false);
+            heroProgressFrame = requestAnimationFrame(tickHeroProgress);
+            renderLookbook(false);
+            setupGridAutoTimer();
+            initHeroSilk();
+            initCampaignFilm();
+            observeReveals();
+
+            if (prefersReducedMotion) {
+                document.getElementById('heroPlayLabel').textContent = 'Auto-Shuffle: Off';
+                document.getElementById('gridAutoLabel').textContent = 'Live Rotate: Off';
+                document.getElementById('filmToggleBtn').textContent = 'Resume Motion';
+                document.getElementById('filmStatusText').textContent = 'Paused';
+            }
+        };
+    </script>
+</body>
+</html>

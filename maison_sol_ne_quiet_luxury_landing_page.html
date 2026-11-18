@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARMAI FASHION DESIGN — Bespoke Royal Tailoring, Kaftan & Couture | Abuja</title>
+    <meta name="description" content="Jarmai Fashion Design — Bespoke menswear, royal Agbada, Senator kaftans, and womenswear boubous at Green Garden & Events Complex, Dakar Street, Wuse Zone 1, Abuja.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23110106'/%3E%3Crect x='3' y='3' width='58' height='58' rx='11' fill='none' stroke='%23EBB63D' stroke-width='1.5'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23EBB63D'%3EJ%3C/text%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js for Flowing Gold-Shot Crimson Silk Hero Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#110106',
+                        velvet: '#1B040C',
+                        burgundy: '#57090F',
+                        wine: '#78111B',
+                        gold: '#EBB63D',
+                        champagne: '#F9E18E',
+                        bronze: '#B8821D',
+                        ivory: '#F7EFE2',
+                        sand: '#C9B7A2',
+                        whatsapp: '#25D366'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-obsidian: #110106;
+            --bg-velvet: #1B040C;
+            --burgundy: #57090F;
+            --gold: #EBB63D;
+            --champagne: #F9E18E;
+            --bronze: #B8821D;
+            --ivory: #F7EFE2;
+            --sand: #C9B7A2;
+            --whatsapp: #25D366;
+            --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+            --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-obsidian);
+            color: var(--ivory);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: rgba(235, 182, 61, 0.3);
+            color: #F9E18E;
+        }
+
+        /* Metallic Logo-Matched Gold Typography */
+        .gold-text {
+            background: linear-gradient(135deg, #FFF4C2 0%, #EBB63D 50%, #B8821D 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .gold-border-subtle {
+            border-color: rgba(235, 182, 61, 0.25);
+        }
+
+        /* Seamless Integration for Jarmai Logo JPEG onto #110106 Ground */
+        .logo-blend {
+            -webkit-mask-image: radial-gradient(ellipse 92% 88% at 50% 50%, #000 70%, transparent 100%);
+            mask-image: radial-gradient(ellipse 92% 88% at 50% 50%, #000 70%, transparent 100%);
+        }
+
+        /* Subtle Velvet Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9990;
+            opacity: 0.14;
+            mix-blend-mode: soft-light;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.22'/%3E%3C/svg%3E");
+        }
+
+        /* Pressable Button Tactile Feedback (Emil Kowalski rule: scale(0.97) on press) */
+        .btn-press {
+            transition: transform 160ms var(--ease-out), background-color 220ms ease, border-color 220ms ease, color 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+            will-change: transform;
+        }
+        .btn-press:active {
+            transform: scale(0.97);
+        }
+
+        /* Smooth Custom Cursor Follower (Fine Pointer Devices Only) */
+        @media (hover: hover) and (pointer: fine) {
+            .cursor-follower {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 34px;
+                height: 34px;
+                border: 1px solid rgba(235, 182, 61, 0.45);
+                border-radius: 9999px;
+                pointer-events: none;
+                z-index: 9999;
+                transform: translate(-50%, -50%);
+                transition: width 280ms var(--ease-out),
+                            height 280ms var(--ease-out),
+                            background-color 240ms ease,
+                            border-color 240ms ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .cursor-follower.active {
+                width: 86px;
+                height: 86px;
+                background-color: rgba(87, 9, 15, 0.92);
+                border-color: rgba(235, 182, 61, 0.85);
+                box-shadow: 0 0 26px rgba(235, 182, 61, 0.22);
+            }
+        }
+
+        /* Editorial Card Motion & Golden Specular Sheen */
+        .editorial-card {
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform 380ms var(--ease-out), box-shadow 380ms var(--ease-out), border-color 280ms ease;
+        }
+        .editorial-card img {
+            transition: transform 700ms var(--ease-out), filter 400ms ease, opacity 400ms ease;
+            will-change: transform;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .editorial-card:hover img {
+                transform: scale(1.045);
+            }
+            .editorial-card:hover {
+                border-color: rgba(235, 182, 61, 0.6);
+            }
+        }
+        .sheen-layer {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(460px circle at var(--mx, 50%) var(--my, 50%), rgba(235, 182, 61, 0.22), transparent 55%);
+            opacity: 0;
+            transition: opacity 320ms ease;
+            pointer-events: none;
+            z-index: 5;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .editorial-card:hover .sheen-layer {
+                opacity: 1;
+            }
+        }
+
+        /* Blur-Masked Image Shuffle Transition for Smoothness */
+        .shuffle-stage {
+            position: relative;
+            overflow: hidden;
+        }
+        .shuffle-image {
+            transition: opacity 380ms var(--ease-out), filter 380ms var(--ease-out), transform 5500ms linear;
+            will-change: transform, opacity, filter;
+        }
+        .shuffle-image.is-swapping {
+            opacity: 0.2;
+            filter: blur(3px);
+            transform: scale(1.03);
+        }
+        .shuffle-image.ken-burns {
+            transform: scale(1.05);
+        }
+
+        /* Stacked Deck Depth Cards in Hero */
+        .deck-back-1 {
+            transform: translate3d(16px, 14px, 0) rotate(2.4deg) scale(0.96);
+            transition: transform 450ms var(--ease-out), opacity 380ms ease;
+        }
+        .deck-back-2 {
+            transform: translate3d(-14px, 20px, 0) rotate(-2.2deg) scale(0.92);
+            transition: transform 450ms var(--ease-out), opacity 380ms ease;
+        }
+        .deck-wrapper:hover .deck-back-1 {
+            transform: translate3d(22px, 16px, 0) rotate(3.2deg) scale(0.965);
+        }
+        .deck-wrapper:hover .deck-back-2 {
+            transform: translate3d(-20px, 22px, 0) rotate(-3deg) scale(0.925);
+        }
+
+        /* Grid Shuffle Animation */
+        .grid-card-item {
+            transition: opacity 320ms var(--ease-out), transform 350ms var(--ease-out), filter 320ms ease;
+            will-change: transform, opacity;
+        }
+        .grid-card-item.shuffling-out {
+            opacity: 0;
+            filter: blur(2.5px);
+            transform: translateY(12px) scale(0.98);
+        }
+
+        /* Animated SVG Golden Thread Path */
+        .drape-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawLine 5.2s var(--ease-out) forwards infinite alternate;
+        }
+        @keyframes drawLine {
+            0% { stroke-dashoffset: 1000; }
+            100% { stroke-dashoffset: 0; }
+        }
+
+        /* Scroll Reveal with Stagger */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 650ms var(--ease-out), transform 650ms var(--ease-out);
+            will-change: transform, opacity;
+        }
+        .reveal-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modal Entrance & Origin */
+        .modal-panel {
+            transition: opacity 250ms var(--ease-out), transform 280ms var(--ease-out);
+            transform-origin: center;
+        }
+        .modal-backdrop.is-entering .modal-panel {
+            opacity: 0;
+            transform: scale(0.96);
+        }
+
+        /* Pulse glow for live badges */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 14px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 0 28px rgba(37, 211, 102, 0.75); }
+        }
+        .whatsapp-glow {
+            animation: pulseGlow 3s infinite ease-in-out;
+        }
+
+        /* Accessibility: Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 120ms !important;
+            }
+            .shuffle-image.ken-burns {
+                transform: none !important;
+            }
+            .whatsapp-glow {
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-ivory antialiased selection:bg-gold/30 selection:text-champagne">
+
+    <!-- Subtle Velvet Texture Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Custom Magnetic Cursor Follower -->
+    <div id="cursorFollower" class="cursor-follower hidden md:flex">
+        <span id="cursorText" class="text-[9px] tracking-[0.2em] uppercase text-champagne opacity-0 transition-opacity duration-200"></span>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 1. TOP NAVIGATION WITH OFFICIAL JARMAI LOGO & CONTACT SHORTCUTS       -->
+    <!-- ===================================================================== -->
+    <header class="fixed top-0 inset-x-0 z-40 bg-obsidian/95 backdrop-blur-md border-b border-gold/20 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 h-20 flex items-center justify-between gap-3">
+            <!-- Left Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-[11px] tracking-[0.22em] uppercase text-sand font-normal">
+                <a href="#collection" data-cursor="EXPLORE" class="hover:text-gold transition-colors">Collection</a>
+                <a href="#film" data-cursor="RUNWAY" class="hover:text-gold transition-colors">Runway Reel</a>
+                <a href="#philosophy" data-cursor="CRAFT" class="hover:text-gold transition-colors">Craftsmanship</a>
+                <a href="#showroom" data-cursor="SHOWROOM" class="hover:text-gold transition-colors">Atelier Boutique</a>
+                <a href="#contact" data-cursor="VISIT" class="hover:text-gold transition-colors text-champagne font-medium">Visit &amp; Map</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn"
+                    onclick="toggleMobileMenu()"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    class="lg:hidden btn-press w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-burgundy/40">
+                <svg id="menuIconOpen" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h10"/>
+                </svg>
+                <svg id="menuIconClose" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
+                </svg>
+            </button>
+
+            <!-- Center Official Brand Logo -->
+            <a href="#top" data-cursor="JARMAI" class="flex items-center gap-3 group shrink-0">
+                <img src="images/logo.jpeg"
+                     alt="Jarmai Fashion Design Official Logo"
+                     class="h-14 sm:h-16 w-auto object-contain logo-blend transition-transform duration-300 group-hover:scale-[1.03]" />
+            </a>
+
+            <!-- Right Fast Action Contact CTA (WhatsApp & Booking) -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="https://wa.me/2348054271819?text=Hello%20Jarmai%20Fashion%20Design%2C%20I%20would%20like%20to%20inquire%20about%20your%20bespoke%20collection%20and%20book%20a%20fitting"
+                   target="_blank"
+                   rel="noopener"
+                   data-cursor="WHATSAPP"
+                   class="btn-press hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-whatsapp/15 border border-whatsapp/40 text-whatsapp hover:bg-whatsapp hover:text-obsidian text-[10px] sm:text-[11px] tracking-[0.16em] uppercase font-semibold">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>08054271819</span>
+                </a>
+                <button onclick="openBookingModal()"
+                        data-cursor="RESERVE"
+                        class="btn-press px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-burgundy/80 border border-gold/45 text-champagne hover:bg-gold hover:text-obsidian hover:border-gold text-[10px] sm:text-[11px] tracking-[0.18em] uppercase font-semibold shadow-sm">
+                    Book Fitting
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Slide-Down Navigation Drawer -->
+        <div id="mobileDrawer" class="hidden lg:hidden bg-velvet/95 border-t border-gold/20 px-6 py-5 space-y-3.5">
+            <a href="#collection" onclick="closeMobileMenu()" class="block text-xs tracking-[0.22em] uppercase text-ivory hover:text-gold py-2 border-b border-gold/10">01 · Signature Collection</a>
+            <a href="#film" onclick="closeMobileMenu()" class="block text-xs tracking-[0.22em] uppercase text-ivory hover:text-gold py-2 border-b border-gold/10">02 · Runway Motion Reel</a>
+            <a href="#philosophy" onclick="closeMobileMenu()" class="block text-xs tracking-[0.22em] uppercase text-ivory hover:text-gold py-2 border-b border-gold/10">03 · Atelier Craftsmanship</a>
+            <a href="#showroom" onclick="closeMobileMenu()" class="block text-xs tracking-[0.22em] uppercase text-ivory hover:text-gold py-2 border-b border-gold/10">04 · Showroom Boutique</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="block text-xs tracking-[0.22em] uppercase text-champagne hover:text-gold py-2 border-b border-gold/10 font-medium">05 · Visit Us &amp; Google Map (Abuja)</a>
+            <div class="pt-2 grid grid-cols-2 gap-3">
+                <a href="https://wa.me/2348054271819?text=Hello%20Jarmai%20Fashion%20Design%2C%20I%20would%20like%20to%20inquire%20about%20your%20bespoke%20collection"
+                   target="_blank"
+                   rel="noopener"
+                   class="btn-press py-3 rounded-xl bg-whatsapp/20 border border-whatsapp/50 text-whatsapp text-center text-xs tracking-[0.16em] uppercase font-semibold">
+                    WhatsApp
+                </a>
+                <a href="tel:07068062594"
+                   class="btn-press py-3 rounded-xl bg-velvet border border-gold/40 text-champagne text-center text-xs tracking-[0.16em] uppercase font-semibold">
+                    Call 07068...
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- 2. HERO WITH THREE.JS GOLD SILK RIBBON & SHUFFLING COUTURE DECK       -->
+    <!-- ===================================================================== -->
+    <section id="top" class="relative min-h-screen pt-28 pb-16 md:py-32 flex items-center overflow-hidden border-b border-gold/20">
+        <!-- Ambient Radial Royal Burgundy Glow -->
+        <div class="absolute inset-0 pointer-events-none"
+             style="background: radial-gradient(circle at 18% 24%, rgba(87, 9, 15, 0.45), transparent 52%), radial-gradient(circle at 82% 72%, rgba(235, 182, 61, 0.12), transparent 46%);">
+        </div>
+
+        <!-- Three.js Flowing Gold & Crimson Silk Canvas -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-80">
+            <canvas id="silkHeroCanvas" class="w-full h-full block"></canvas>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            <!-- Left Editorial Typography -->
+            <div class="lg:col-span-6 xl:col-span-7 space-y-7">
+                <div class="inline-flex items-center gap-3 text-[11px] tracking-[0.26em] uppercase text-gold">
+                    <span class="w-8 h-[1px] bg-gold/70"></span>
+                    <span>Jarmai Atelier · Green Garden Complex, Wuse Zone 1, Abuja</span>
+                </div>
+
+                <h1 class="font-serif text-5xl sm:text-6xl xl:text-[5.25rem] leading-[0.98] text-ivory font-light tracking-tight">
+                    Regal Form, <br/>
+                    <span class="italic font-normal gold-text">Hand-Embroidered</span> <br/>
+                    Heritage &amp; Silhouette.
+                </h1>
+
+                <p class="max-w-lg text-sand text-base md:text-lg font-light leading-relaxed">
+                    Handcrafted at Jarmai Fashion Design for clients across Nigeria and the diaspora. Ceremonial Agbada, precision geometric-placket Senators, and bespoke luxury womenswear boubous made to measure in our Abuja atelier.
+                </p>
+
+                <!-- Primary Action Buttons -->
+                <div class="pt-1 flex flex-wrap items-center gap-3 sm:gap-4">
+                    <a href="#collection"
+                       data-cursor="LOOKBOOK"
+                       class="btn-press px-6 sm:px-7 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-champagne via-gold to-bronze text-obsidian text-xs tracking-[0.2em] uppercase font-bold shadow-lg shadow-gold/15 hover:brightness-105">
+                        Explore Collection
+                    </a>
+                    <button onclick="shuffleHeroNext()"
+                            data-cursor="SHUFFLE"
+                            class="btn-press px-5 sm:px-6 py-3.5 sm:py-4 rounded-full bg-velvet/90 border border-gold/40 text-champagne text-xs tracking-[0.2em] uppercase hover:bg-burgundy/60 hover:border-gold flex items-center gap-2">
+                        <span>Shuffle Lookbook</span>
+                        <span aria-hidden="true">↻</span>
+                    </button>
+                    <a href="https://wa.me/2348054271819?text=Hello%20Jarmai%20Fashion%20Design%2C%20I%20would%20like%20to%20inquire%20about%20your%20collection"
+                       target="_blank"
+                       rel="noopener"
+                       data-cursor="WHATSAPP"
+                       class="btn-press px-5 py-3.5 sm:py-4 rounded-full bg-whatsapp/20 border border-whatsapp/50 text-whatsapp hover:bg-whatsapp hover:text-obsidian text-xs tracking-[0.18em] uppercase font-semibold flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-whatsapp animate-ping"></span>
+                        <span>WhatsApp Us</span>
+                    </a>
+                </div>
+
+                <!-- Bespoke Provenance Strip -->
+                <div class="pt-4 grid grid-cols-3 gap-4 border-t border-gold/20 max-w-lg">
+                    <div>
+                        <p class="font-serif text-2xl gold-text font-medium">Abuja FCT</p>
+                        <p class="text-[11px] tracking-wider uppercase text-sand/80 mt-0.5">Wuse Zone 1 Atelier</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl gold-text font-medium">Bespoke</p>
+                        <p class="text-[11px] tracking-wider uppercase text-sand/80 mt-0.5">Custom Measurements</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-2xl gold-text font-medium">Couture</p>
+                        <p class="text-[11px] tracking-wider uppercase text-sand/80 mt-0.5">Agbada · Kaftan · Boubou</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Interactive Shuffling Style Deck -->
+            <div class="lg:col-span-6 xl:col-span-5">
+                <div class="deck-wrapper relative max-w-md mx-auto pb-4"
+                     onmouseenter="pauseHeroShuffle(true)"
+                     onmouseleave="pauseHeroShuffle(false)">
+
+                    <!-- Stacked Background Depth Cards (Visual Shuffle Queue) -->
+                    <div class="deck-back-2 absolute inset-0 rounded-2xl bg-velvet/90 border border-gold/20 overflow-hidden pointer-events-none opacity-65">
+                        <img id="heroBackImg2" src="images/2/2349063460563_s_whatsapp_net-A50CD3CD2C673BC900C28EFF08E2C651.jpg" alt="" class="w-full h-full object-cover object-top opacity-55" />
+                        <div class="absolute inset-0 bg-obsidian/55"></div>
+                    </div>
+                    <div class="deck-back-1 absolute inset-0 rounded-2xl bg-velvet/95 border border-gold/30 overflow-hidden pointer-events-none opacity-85">
+                        <img id="heroBackImg1" src="images/2/2349063460563_s_whatsapp_net-A5C14AEA15E39A45B42CC834C0CDDB9A.jpg" alt="" class="w-full h-full object-cover object-top opacity-70" />
+                        <div class="absolute inset-0 bg-obsidian/40"></div>
+                    </div>
+
+                    <!-- Front Active Shuffling Hero Card -->
+                    <div onclick="openActiveHeroLook()"
+                         data-cursor="INSPECT"
+                         onmousemove="tiltCard(event, this)"
+                         onmouseleave="resetTilt(this)"
+                         class="editorial-card relative z-10 cursor-pointer rounded-2xl bg-velvet p-3 border border-gold/45 shadow-2xl shadow-black/80">
+                        <div class="sheen-layer"></div>
+
+                        <div class="shuffle-stage aspect-[4/5] rounded-xl overflow-hidden bg-obsidian relative border border-gold/15">
+                            <img id="heroMainImg"
+                                 src="images/1/2349063460563_s_whatsapp_net-A5D114F91437B4768684B48A248B4B15.jpg"
+                                 alt="The Midnight Sovereign Grand Agbada"
+                                 class="shuffle-image w-full h-full object-cover object-top" />
+
+                            <!-- Edge Vignette for Text Contrast -->
+                            <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-obsidian/75 to-transparent pointer-events-none"></div>
+                            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-obsidian/90 via-obsidian/40 to-transparent pointer-events-none"></div>
+
+                            <!-- Top Badges -->
+                            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between gap-2 pointer-events-none">
+                                <span id="heroPieceBadge" class="px-3 py-1.5 rounded-full bg-obsidian/85 backdrop-blur-md border border-gold/40 text-[10px] tracking-[0.2em] uppercase text-champagne">
+                                    Design N° 01
+                                </span>
+                                <span id="heroCategoryBadge" class="px-3 py-1.5 rounded-full bg-burgundy/90 backdrop-blur-md border border-gold/30 text-[10px] tracking-[0.16em] uppercase text-ivory">
+                                    Royal Agbada
+                                </span>
+                            </div>
+
+                            <!-- Bottom Live Progress Bar (GPU transform) -->
+                            <div class="absolute bottom-0 inset-x-0 h-[3px] bg-ivory/15">
+                                <div id="heroProgressBar" class="h-full w-full origin-left bg-gradient-to-r from-bronze via-gold to-champagne" style="transform: scaleX(0);"></div>
+                            </div>
+                        </div>
+
+                        <!-- Card Caption -->
+                        <div class="pt-4 pb-1.5 px-1.5 flex items-end justify-between gap-3">
+                            <div>
+                                <h2 id="heroPieceTitle" class="font-serif text-2xl text-ivory italic leading-snug">
+                                    The Midnight Sovereign Grand Agbada
+                                </h2>
+                                <p id="heroPieceSwatch" class="text-xs text-sand tracking-wide mt-0.5">
+                                    Heavy Silk-Wool Blend · Half-Mandala Zardozi Embroidery
+                                </p>
+                            </div>
+                            <span class="text-[11px] tracking-[0.18em] uppercase text-gold shrink-0">Inspect →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Thumbnail Queue & Shuffle Controls -->
+                <div class="max-w-md mx-auto mt-4 space-y-3">
+                    <div id="heroThumbs" class="grid grid-cols-6 gap-2">
+                        <!-- Rendered by JS -->
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] tracking-[0.16em] uppercase text-sand">
+                        <div class="flex items-center gap-2">
+                            <button onclick="prevHeroLook()" class="btn-press px-3 py-1.5 rounded-full bg-velvet border border-gold/30 hover:border-gold hover:text-champagne">← Prev</button>
+                            <button onclick="nextHeroLook()" class="btn-press px-3 py-1.5 rounded-full bg-velvet border border-gold/30 hover:border-gold hover:text-champagne">Next →</button>
+                        </div>
+                        <button id="heroPlayBtn" onclick="toggleHeroAutoShuffle()" class="btn-press px-3.5 py-1.5 rounded-full bg-burgundy/50 border border-gold/35 text-champagne hover:border-gold flex items-center gap-2">
+                            <span id="heroPlayDot" class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+                            <span id="heroPlayLabel">Auto-Shuffle: On</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. CURATED OFFICIAL SHUFFLING LOOKBOOK ARCHIVE                         -->
+    <!-- ===================================================================== -->
+    <section id="collection" class="py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 border-b border-gold/20 scroll-mt-20">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6 reveal-up">
+            <div>
+                <p class="text-xs tracking-[0.26em] uppercase text-gold mb-3">01 / Official Atelier Portfolio</p>
+                <h2 class="font-serif text-4xl sm:text-6xl text-ivory font-light">
+                    Signature <span class="italic gold-text">Silhouettes</span> &amp; Needlework
+                </h2>
+            </div>
+            <p class="max-w-md text-sm text-sand font-light leading-relaxed">
+                Featuring our official bespoke creations from the Abuja showroom. Every tunic, kaftan, and boubou is individually cut and finished with hand-guided metallic threadwork.
+            </p>
+        </div>
+
+        <!-- Category Filters & Live Grid Shuffling Toolbar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-8 mb-10 border-b border-gold/15 reveal-up">
+            <div class="flex flex-wrap items-center gap-2" id="filterBar">
+                <button onclick="setCategoryFilter('all')" data-filter="all" class="filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-gold text-obsidian border-gold font-bold">
+                    All Pieces (12)
+                </button>
+                <button onclick="setCategoryFilter('kaftan')" data-filter="kaftan" class="filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-velvet text-sand border-gold/25 hover:border-gold hover:text-ivory">
+                    Kaftans &amp; Senators (5)
+                </button>
+                <button onclick="setCategoryFilter('agbada')" data-filter="agbada" class="filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-velvet text-sand border-gold/25 hover:border-gold hover:text-ivory">
+                    Royal Agbada (2)
+                </button>
+                <button onclick="setCategoryFilter('womenswear')" data-filter="womenswear" class="filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-velvet text-sand border-gold/25 hover:border-gold hover:text-ivory">
+                    Womenswear &amp; Boubou (3)
+                </button>
+                <button onclick="setCategoryFilter('showroom')" data-filter="showroom" class="filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-velvet text-sand border-gold/25 hover:border-gold hover:text-ivory">
+                    Atelier &amp; Showroom (2)
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="shuffleLookbookGrid()"
+                        data-cursor="SHUFFLE"
+                        class="btn-press px-4 py-2 rounded-full bg-burgundy/70 border border-gold/45 text-champagne hover:bg-gold hover:text-obsidian text-[11px] tracking-[0.18em] uppercase flex items-center gap-2 font-medium">
+                    <span>Shuffle Gallery</span>
+                    <span aria-hidden="true">↻</span>
+                </button>
+                <button id="gridAutoBtn"
+                        onclick="toggleGridAutoShuffle()"
+                        class="btn-press px-4 py-2 rounded-full bg-velvet border border-gold/30 text-sand hover:border-gold hover:text-champagne text-[11px] tracking-[0.18em] uppercase flex items-center gap-2">
+                    <span id="gridAutoDot" class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+                    <span id="gridAutoLabel">Live Rotate: On</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Curated Dynamic Editorial Grid -->
+        <div id="lookbookGrid" class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 items-start">
+            <!-- Rendered dynamically by JS -->
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. ATELIER MOTION STUDY & SYNCHRONIZED RUNWAY REEL                    -->
+    <!-- ===================================================================== -->
+    <section id="film" class="py-24 md:py-32 bg-velvet/70 border-b border-gold/20 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 reveal-up">
+                <div>
+                    <p class="text-xs tracking-[0.26em] uppercase text-gold mb-3">02 / Runway Motion Reel</p>
+                    <h2 class="font-serif text-4xl sm:text-6xl text-ivory font-light">
+                        Golden Thread &amp; <span class="italic gold-text">Royal Drape</span>
+                    </h2>
+                </div>
+
+                <!-- Motion, Reel & Ambient Sound Controls -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <button id="filmToggleBtn" onclick="toggleFilmPlay()" class="btn-press px-5 py-2.5 rounded-full bg-obsidian border border-gold/35 hover:border-gold text-champagne text-[11px] tracking-[0.18em] uppercase">
+                        Pause Motion
+                    </button>
+                    <button onclick="shuffleFilmSlide()" class="btn-press px-5 py-2.5 rounded-full bg-burgundy/70 border border-gold/40 hover:border-gold text-champagne text-[11px] tracking-[0.18em] uppercase">
+                        Next Silhouette ↻
+                    </button>
+                    <button id="soundToggleBtn" onclick="toggleAmbientSound()" class="btn-press px-5 py-2.5 rounded-full bg-obsidian border border-gold/35 hover:border-gold text-ivory text-[11px] tracking-[0.18em] uppercase flex items-center gap-2">
+                        <span id="soundDot" class="w-1.5 h-1.5 rounded-full bg-sand"></span>
+                        <span id="soundLabel">Sound: Off</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Living Cinema Stage: Silk Wave Canvas + Synchronized Shuffling Garment -->
+            <div class="relative rounded-3xl overflow-hidden border border-gold/30 shadow-2xl min-h-[460px] md:h-[540px] w-full bg-obsidian reveal-up">
+                <canvas id="campaignFilmCanvas" class="absolute inset-0 w-full h-full block"></canvas>
+
+                <div class="relative z-10 h-full grid grid-cols-1 md:grid-cols-12 gap-6 p-6 md:p-10 items-center bg-gradient-to-r from-obsidian/90 via-obsidian/55 to-obsidian/30">
+                    <!-- Left Editorial Quote & Film Metadata -->
+                    <div class="md:col-span-7 flex flex-col justify-between h-full space-y-6">
+                        <div class="flex items-center gap-4 text-[11px] tracking-[0.22em] uppercase text-gold/90">
+                            <span>Jarmai Runway Study — Abuja Boutique Lighting</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-burgundy/80 border border-gold/30 text-champagne text-[10px]" id="filmStatusText">Playing</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <p class="font-serif text-2xl sm:text-4xl md:text-[2.6rem] italic font-light leading-tight text-ivory">
+                                “True tailoring commands presence before a single word is spoken—where heritage geometry meets sculpted modern form.”
+                            </p>
+                            <p class="text-xs tracking-[0.2em] uppercase text-sand">
+                                — Jarmai Fashion Design · Wuse Zone 1, Abuja
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-3 pt-2">
+                            <span class="text-[11px] tracking-[0.18em] uppercase text-sand">Currently Featured:</span>
+                            <span id="filmPieceName" class="font-serif text-xl italic gold-text">The Midnight Sovereign Grand Agbada</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Shuffling Garment Frame -->
+                    <div class="md:col-span-5 flex justify-center md:justify-end">
+                        <div onclick="openFilmLook()"
+                             data-cursor="VIEW PIECE"
+                             class="editorial-card cursor-pointer w-64 sm:w-72 rounded-2xl bg-velvet/95 p-2.5 border border-gold/45 shadow-2xl">
+                            <div class="sheen-layer"></div>
+                            <div class="shuffle-stage aspect-[4/5] rounded-xl overflow-hidden bg-obsidian relative">
+                                <img id="filmLookImg"
+                                     src="images/1/2349063460563_s_whatsapp_net-A5D114F91437B4768684B48A248B4B15.jpg"
+                                     alt="Featured Atelier Look"
+                                     class="shuffle-image w-full h-full object-cover object-top" />
+                                <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-obsidian/90 via-obsidian/50 to-transparent">
+                                    <span id="filmLookTag" class="text-[10px] tracking-[0.18em] uppercase text-champagne block">Design N° 01 · Royal Agbada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. ATELIER CRAFTSMANSHIP & REAL WORKSHOP SEWING MACHINE SECTION       -->
+    <!-- ===================================================================== -->
+    <section id="philosophy" class="py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 border-b border-gold/20 scroll-mt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            <!-- Left: Real Workshop Tailoring Photo + Gold Needlework Overlay -->
+            <div class="lg:col-span-6 reveal-up">
+                <div class="relative rounded-3xl bg-velvet border border-gold/35 p-3.5 shadow-2xl overflow-hidden">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-obsidian relative">
+                        <img src="images/1/2349063460563_s_whatsapp_net-A5F79AE6402CF17E39D3E874222D0710.jpg"
+                             alt="Jarmai Tailoring Workshop Machine Stitching and Pocket Cross-Stitch Detail"
+                             class="w-full h-full object-cover object-center" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-obsidian/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                            <span class="px-3.5 py-1.5 rounded-full bg-obsidian/90 backdrop-blur-md border border-gold/35 text-[10px] tracking-[0.2em] uppercase text-champagne">
+                                Workshop In-Progress · Precision French Seams
+                            </span>
+                            <span class="text-xs text-gold">Abuja Atelier</span>
+                        </div>
+                    </div>
+
+                    <!-- Tailoring Dimension Badge Strip -->
+                    <div class="mt-3.5 p-3.5 rounded-xl bg-obsidian/90 border border-gold/20 flex items-center justify-between text-xs text-sand">
+                        <span>45° True-Bias Hand Draping</span>
+                        <span class="text-gold">·</span>
+                        <span>Zero Distortion Interlining</span>
+                        <span class="text-gold">·</span>
+                        <span>Reinforced Collar Stands</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Designer Craftsmanship Narrative -->
+            <div class="lg:col-span-6 space-y-6 reveal-up">
+                <p class="text-xs tracking-[0.26em] uppercase text-gold">03 / The Jarmai House Standard</p>
+                <h2 class="font-serif text-4xl sm:text-5xl text-ivory font-light leading-[1.08]">
+                    Precision Needlework, <br/>
+                    <span class="italic gold-text">Tailored for Distinction.</span>
+                </h2>
+                <p class="text-sand text-base md:text-lg font-light leading-relaxed">
+                    At Jarmai Fashion Design, tailoring is an art of millimeters. From the hand-guided mandala embroidery on our sovereign Agbadas to razor-sharp geometric plackets on crisp Egyptian cotton kaftans, every garment is drafted individually to each client's posture and stride.
+                </p>
+                <p class="text-sand/90 text-base font-light leading-relaxed">
+                    Our master tailors at Green Garden Complex reinforce collars, mitre chest pocket borders, and balance fabric drape so that your garment holds its majestic form through long ceremonies and celebrations.
+                </p>
+
+                <!-- 3-Step Bespoke Process Cards -->
+                <div class="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3.5 border-t border-gold/20">
+                    <div class="p-4 rounded-2xl bg-velvet/85 border border-gold/20">
+                        <span class="text-[10px] tracking-[0.22em] uppercase text-gold block font-semibold">Step 01</span>
+                        <h3 class="font-serif text-xl text-ivory mt-1">Cloth &amp; Motif</h3>
+                        <p class="text-xs text-sand font-light mt-1 leading-relaxed">Select wool, linen, or lace with custom embroidery motifs.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-velvet/85 border border-gold/20">
+                        <span class="text-[10px] tracking-[0.22em] uppercase text-gold block font-semibold">Step 02</span>
+                        <h3 class="font-serif text-xl text-ivory mt-1">True Measure</h3>
+                        <p class="text-xs text-sand font-light mt-1 leading-relaxed">In-atelier fitting at Wuse Zone 1 or guided virtual drafting.</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-velvet/85 border border-gold/20">
+                        <span class="text-[10px] tracking-[0.22em] uppercase text-gold block font-semibold">Step 03</span>
+                        <h3 class="font-serif text-xl text-ivory mt-1">Final Fitting</h3>
+                        <p class="text-xs text-sand font-light mt-1 leading-relaxed">Hand-finished seams &amp; private delivery across Nigeria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. THE OFFICIAL ABUJA SHOWROOM & ATELIER EXPERIENCE                   -->
+    <!-- ===================================================================== -->
+    <section id="showroom" class="py-24 md:py-32 bg-velvet/60 border-b border-gold/20 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6 reveal-up">
+                <div>
+                    <p class="text-xs tracking-[0.26em] uppercase text-gold mb-3">04 / The Abuja Flagship Salon</p>
+                    <h2 class="font-serif text-4xl sm:text-6xl text-ivory font-light">
+                        Step Inside the <span class="italic gold-text">Jarmai Boutique</span>
+                    </h2>
+                </div>
+                <div class="space-y-2">
+                    <p class="max-w-md text-sm text-sand font-light leading-relaxed">
+                        Experience our warm salon at Green Garden &amp; Events Complex, Dakar Street, Wuse Zone 1, Abuja. View our ready-to-wear racks, touch luxurious fabric bolts, and consult with the master designer.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="#contact" class="text-xs tracking-[0.18em] uppercase text-gold hover:text-champagne font-semibold flex items-center gap-1.5">
+                            <span>View Location &amp; Map Below</span>
+                            <span>↓</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3-Column Showroom Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+                <!-- Master Tailor in Showroom -->
+                <div class="md:col-span-5 reveal-up">
+                    <div class="editorial-card rounded-3xl bg-velvet p-3 border border-gold/35 shadow-xl h-full flex flex-col justify-between">
+                        <div class="sheen-layer"></div>
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-obsidian relative">
+                            <img src="images/2/2349063460563_s_whatsapp_net-A5C14AEA15E39A45B42CC834C0CDDB9A.jpg"
+                                 alt="Jarmai Fashion Design Master Tailor inside the Abuja showroom with illuminated brand sign"
+                                 class="w-full h-full object-cover object-top" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <span class="px-3 py-1 rounded-full bg-burgundy/85 backdrop-blur-md border border-gold/30 text-[10px] tracking-[0.18em] uppercase text-champagne">
+                                    The Master Tailor
+                                </span>
+                                <h3 class="font-serif text-2xl text-ivory mt-2">Boutique Consultation &amp; Fitting</h3>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <p class="text-xs text-sand font-light leading-relaxed">
+                                Personalized fabric consultation with the lead designer under our signature illuminated Jarmai boutique crest.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showroom Luxury Racks & Ready-to-Wear Collection -->
+                <div class="md:col-span-4 reveal-up">
+                    <div class="editorial-card rounded-3xl bg-velvet p-3 border border-gold/35 shadow-xl h-full flex flex-col justify-between">
+                        <div class="sheen-layer"></div>
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-obsidian relative">
+                            <img src="images/2/2349063460563_s_whatsapp_net-A5C553C437988B04F1D3568AC8912A54.jpg"
+                                 alt="Luxury collection rack featuring silk abayas, kaftans, and robes"
+                                 class="w-full h-full object-cover object-center" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <span class="px-3 py-1 rounded-full bg-obsidian/85 backdrop-blur-md border border-gold/30 text-[10px] tracking-[0.18em] uppercase text-champagne">
+                                    Ready-to-Wear &amp; Bespoke Racks
+                                </span>
+                                <h3 class="font-serif text-2xl text-ivory mt-2">Curated Silk &amp; Velvet Palette</h3>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <p class="text-xs text-sand font-light leading-relaxed">
+                                Exclusive colorways in chartreuse gold, royal plum, midnight indigo, and desert sand ready for immediate fitting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Canary Yellow Boubou Client & Garment Presentation -->
+                <div class="md:col-span-3 reveal-up">
+                    <div class="editorial-card rounded-3xl bg-velvet p-3 border border-gold/35 shadow-xl h-full flex flex-col justify-between">
+                        <div class="sheen-layer"></div>
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-obsidian relative">
+                            <img src="images/2/2349063460563_s_whatsapp_net-A50CD3CD2C673BC900C28EFF08E2C651.jpg"
+                                 alt="Client fitting canary yellow eyelet lace boubou gown"
+                                 class="w-full h-full object-cover object-top" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <span class="px-3 py-1 rounded-full bg-gold/90 text-obsidian text-[10px] tracking-[0.18em] uppercase font-bold">
+                                    Couture Fitting
+                                </span>
+                                <h3 class="font-serif text-xl text-ivory mt-2">Eyelet Lace Boubou</h3>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <p class="text-xs text-sand font-light leading-relaxed">
+                                Handcrafted womenswear boubous drape with flowing grace for weddings and high-profile events.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 7. CONTACT, GOOGLE MAP & SALON LOCATION SECTION (NEW & PROMINENT)     -->
+    <!-- ===================================================================== -->
+    <section id="contact" class="py-24 md:py-32 bg-obsidian border-b border-gold/20 relative overflow-hidden scroll-mt-20">
+        <!-- Ambient Glow -->
+        <div class="absolute inset-0 pointer-events-none"
+             style="background: radial-gradient(circle at 80% 30%, rgba(87, 9, 15, 0.4), transparent 50%), radial-gradient(circle at 20% 70%, rgba(235, 182, 61, 0.1), transparent 45%);">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-4 reveal-up">
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-burgundy/60 border border-gold/30 text-champagne text-[11px] tracking-[0.22em] uppercase">
+                    <span class="w-2 h-2 rounded-full bg-whatsapp animate-pulse"></span>
+                    <span>Direct Atelier Contact &amp; Showroom Location</span>
+                </div>
+                <h2 class="font-serif text-4xl sm:text-6xl text-ivory font-light leading-tight">
+                    Visit the <span class="italic gold-text">Jarmai Atelier</span>
+                </h2>
+                <p class="text-sand text-base sm:text-lg font-light leading-relaxed">
+                    We welcome you to our Abuja showroom for private fittings, fabric selections, and bespoke bridal or ceremonial commissions.
+                </p>
+            </div>
+
+            <!-- Two-Column Grid: Left Contact Info Cards & Form / Right Google Map -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                <!-- Left: Contact Details & Quick Channels -->
+                <div class="lg:col-span-6 space-y-6 flex flex-col justify-between reveal-up">
+                    <!-- Physical Address Card -->
+                    <div class="p-6 sm:p-7 rounded-3xl bg-velvet border border-gold/35 shadow-xl space-y-3 relative overflow-hidden">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-burgundy/80 border border-gold/40 flex items-center justify-center text-champagne shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4.97-4.97-8-8.5-8-12a8 8 0 1116 0c0 3.5-3.03 7.03-8 12z"/>
+                                    <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-[11px] tracking-[0.2em] uppercase text-gold font-medium">Showroom &amp; Atelier Address</p>
+                                <h3 class="font-serif text-2xl text-ivory leading-snug">
+                                    Green Garden and Events Complex
+                                </h3>
+                                <p class="text-sand text-sm font-light">
+                                    Dakar Street, Wuse Zone 1, Abuja FCT, Nigeria
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-gold/15 flex flex-wrap items-center gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Green+garden+and+events+complex,+Dakar+street,+wuse+zone+1,+Abuja+FCT"
+                               target="_blank"
+                               rel="noopener"
+                               data-cursor="DIRECTIONS"
+                               class="btn-press px-4 py-2 rounded-full bg-gold/15 border border-gold/40 text-champagne hover:bg-gold hover:text-obsidian text-[11px] tracking-[0.16em] uppercase font-semibold flex items-center gap-2">
+                                <span>Get Directions on Google Maps</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Direct Instant Channels (WhatsApp + Call) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- WhatsApp Card -->
+                        <div class="p-6 rounded-3xl bg-velvet border border-whatsapp/30 shadow-xl space-y-3 relative overflow-hidden">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-2xl bg-whatsapp/20 border border-whatsapp/50 flex items-center justify-center text-whatsapp shrink-0">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] tracking-[0.2em] uppercase text-sand">Instant WhatsApp</p>
+                                    <p class="font-serif text-xl text-ivory font-medium">08054271819</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/2348054271819?text=Hello%20Jarmai%20Fashion%20Design%2C%20I%20would%20like%20to%20book%20a%20fitting%20at%20Green%20Garden%20Complex"
+                               target="_blank"
+                               rel="noopener"
+                               data-cursor="WHATSAPP"
+                               class="btn-press w-full py-2.5 rounded-full bg-whatsapp/25 border border-whatsapp/60 text-whatsapp hover:bg-whatsapp hover:text-obsidian text-center text-xs tracking-[0.16em] uppercase font-bold block">
+                                Chat on WhatsApp →
+                            </a>
+                        </div>
+
+                        <!-- Direct Call Card -->
+                        <div class="p-6 rounded-3xl bg-velvet border border-gold/30 shadow-xl space-y-3 relative overflow-hidden">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-2xl bg-burgundy/80 border border-gold/40 flex items-center justify-center text-champagne shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] tracking-[0.2em] uppercase text-sand">Direct Atelier Lines</p>
+                                    <p class="font-serif text-xl text-ivory font-medium">07068062594</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="tel:07068062594"
+                                   data-cursor="CALL"
+                                   class="btn-press py-2 rounded-full bg-burgundy/60 border border-gold/35 text-champagne hover:bg-gold hover:text-obsidian text-center text-[10px] tracking-[0.14em] uppercase font-semibold block">
+                                    Call 07068...
+                                </a>
+                                <a href="tel:08054271819"
+                                   data-cursor="CALL"
+                                   class="btn-press py-2 rounded-full bg-burgundy/60 border border-gold/35 text-champagne hover:bg-gold hover:text-obsidian text-center text-[10px] tracking-[0.14em] uppercase font-semibold block">
+                                    Call 08054...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Showroom Hours & Appointment CTA Strip -->
+                    <div class="p-6 rounded-3xl bg-velvet/80 border border-gold/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div class="space-y-1">
+                            <p class="text-[10px] tracking-[0.22em] uppercase text-gold font-medium">Atelier Visiting Hours</p>
+                            <p class="text-xs text-ivory font-light">Monday – Friday: 8:30 AM – 7:30 PM</p>
+                            <p class="text-xs text-sand font-light">Saturday: 9:00 AM – 7:00 PM · Sunday: By Appointment</p>
+                        </div>
+                        <button onclick="openBookingModal()"
+                                data-cursor="FITTING"
+                                class="btn-press px-6 py-3 rounded-full bg-gradient-to-r from-champagne via-gold to-bronze text-obsidian text-xs tracking-[0.18em] uppercase font-bold shrink-0">
+                            Book Salon Fitting
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Google Map with Luxury Frame -->
+                <div class="lg:col-span-6 reveal-up">
+                    <div class="h-full rounded-3xl bg-velvet p-3.5 border border-gold/40 shadow-2xl flex flex-col justify-between">
+                        <!-- Top Map Header -->
+                        <div class="px-3 py-2.5 flex items-center justify-between gap-2 border-b border-gold/15 mb-3">
+                            <div class="flex items-center gap-2 text-xs tracking-[0.18em] uppercase text-champagne">
+                                <span class="w-2 h-2 rounded-full bg-gold"></span>
+                                <span>Google Maps · Wuse Zone 1, Abuja</span>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Green+garden+and+events+complex,+Dakar+street,+wuse+zone+1,+Abuja+FCT"
+                               target="_blank"
+                               rel="noopener"
+                               class="text-[10px] tracking-wider uppercase text-sand hover:text-gold transition-colors flex items-center gap-1">
+                                <span>Open Fullscreen</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+
+                        <!-- Embedded Google Map Iframe -->
+                        <div class="relative rounded-2xl overflow-hidden bg-obsidian flex-1 min-h-[360px] sm:min-h-[440px] border border-gold/20">
+                            <iframe
+                                title="Jarmai Fashion Design Location Google Map"
+                                src="https://maps.google.com/maps?q=Green%20garden%20and%20events%20complex%2C%20Dakar%20street%2C%20wuse%20zone%201%2C%20Abuja%20FCT&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                                class="w-full h-full min-h-[360px] sm:min-h-[440px] border-0 block"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+
+                            <!-- Floating Map Location Pin Marker Card -->
+                            <div class="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs p-3.5 rounded-2xl bg-obsidian/95 backdrop-blur-md border border-gold/40 shadow-xl pointer-events-auto">
+                                <p class="text-[10px] tracking-[0.2em] uppercase text-gold font-semibold">Jarmai Fashion Design</p>
+                                <p class="text-xs text-ivory font-medium mt-0.5">Green Garden &amp; Events Complex</p>
+                                <p class="text-[11px] text-sand mt-0.5">Dakar St, Wuse Zone 1, Abuja FCT</p>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Address Bar & Fast Actions -->
+                        <div class="pt-3 px-2 flex flex-wrap items-center justify-between gap-3 text-xs text-sand">
+                            <span>GPS: Dakar Street, Wuse Zone 1, Abuja</span>
+                            <div class="flex items-center gap-3">
+                                <a href="https://wa.me/2348054271819" target="_blank" rel="noopener" class="text-whatsapp hover:underline text-[11px] uppercase tracking-wider">WhatsApp Concierge</a>
+                                <span>·</span>
+                                <a href="tel:07068062594" class="text-champagne hover:underline text-[11px] uppercase tracking-wider">07068062594</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 8. FOOTER WITH JARMAI LOGO CREST & PRIVATE CONSULTATION CTA           -->
+    <!-- ===================================================================== -->
+    <footer class="py-24 md:py-32 bg-obsidian relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-8 reveal-up relative z-10">
+            <!-- Brand Crest Integration -->
+            <div class="flex items-center justify-center gap-6">
+                <span class="hidden sm:block h-[1px] w-24 bg-gradient-to-r from-transparent to-gold/60"></span>
+                <img src="images/logo.jpeg"
+                     alt="Jarmai Fashion Design Crest"
+                     class="w-52 sm:w-64 h-auto mx-auto logo-blend" />
+                <span class="hidden sm:block h-[1px] w-24 bg-gradient-to-l from-transparent to-gold/60"></span>
+            </div>
+
+            <p class="text-xs tracking-[0.28em] uppercase text-gold">Green Garden Complex · Dakar Street · Wuse Zone 1 · Abuja FCT</p>
+
+            <h2 class="font-serif text-4xl sm:text-6xl text-ivory font-light leading-[1.04]">
+                Commission Your Next <br/>
+                <span class="italic gold-text">Signature Silhouette.</span>
+            </h2>
+
+            <p class="max-w-md mx-auto text-sand text-base font-light leading-relaxed">
+                Private consultations, custom embroidery palettes, and bespoke ceremonial commissions are available by appointment at our Abuja showroom.
+            </p>
+
+            <div class="pt-2 flex flex-wrap justify-center gap-4">
+                <button onclick="openBookingModal()"
+                        data-cursor="BOOK SALON"
+                        class="btn-press px-8 sm:px-10 py-4 rounded-full bg-gradient-to-r from-champagne via-gold to-bronze text-obsidian text-xs tracking-[0.22em] uppercase font-bold shadow-lg shadow-gold/15 hover:brightness-105">
+                    Request Private Consultation
+                </button>
+                <a href="https://wa.me/2348054271819?text=Hello%20Jarmai%20Fashion%20Design%2C%20I%20would%20like%20to%20inquire%20about%20a%20bespoke%20order"
+                   target="_blank"
+                   rel="noopener"
+                   class="btn-press px-7 py-4 rounded-full bg-whatsapp/20 border border-whatsapp/50 text-whatsapp hover:bg-whatsapp hover:text-obsidian text-xs tracking-[0.2em] uppercase font-semibold flex items-center gap-2">
+                    <span>Message WhatsApp (08054271819)</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 mt-20 pt-8 border-t border-gold/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-sand tracking-[0.2em] uppercase">
+            <span>© 2026 JARMAI FASHION DESIGN · ABUJA</span>
+            <span>Green Garden Complex, Dakar St, Wuse Zone 1 · Call 07068062594</span>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- FLOATING QUICK-CONTACT WHATSAPP ACTION PILL (BOTTOM RIGHT)            -->
+    <!-- ===================================================================== -->
+    <aside aria-label="Quick contact" class="fixed bottom-6 right-5 z-40">
+        <a href="https://wa.me/2348054271819?text=Hello%20Jarmai%20Fashion%20Design%2C%20I%20am%20interested%20in%20your%20bespoke%20collection"
+           target="_blank"
+           rel="noopener"
+           aria-label="Chat with Jarmai Fashion Design on WhatsApp at 08054271819"
+           data-cursor="CHAT"
+           class="btn-press whatsapp-glow flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-full bg-gradient-to-r from-[#20ba59] to-[#128C7E] text-white shadow-2xl hover:scale-105 text-xs font-semibold tracking-wider uppercase border border-white/20">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span class="hidden sm:inline">WhatsApp Atelier</span>
+        </a>
+    </aside>
+
+    <!-- ===================================================================== -->
+    <!-- QUICK-VIEW GARMENT MODAL (WITH PREV/NEXT & WHATSAPP ACTION)           -->
+    <!-- ===================================================================== -->
+    <div id="lookModal" class="modal-backdrop fixed inset-0 z-50 hidden bg-obsidian/85 backdrop-blur-md flex items-center justify-center p-4 md:p-8">
+        <div class="modal-panel bg-velvet border border-gold/40 rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl grid grid-cols-1 md:grid-cols-12">
+            <!-- Modal Image Column -->
+            <div class="md:col-span-6 bg-obsidian relative aspect-[4/5] md:aspect-auto md:min-h-[500px]">
+                <img id="modalImg" src="" alt="Garment Detail" class="w-full h-full object-cover object-top" />
+                <div class="absolute bottom-4 inset-x-4 flex items-center justify-between gap-2">
+                    <button onclick="stepLookModal(-1)" class="btn-press px-3.5 py-2 rounded-full bg-obsidian/85 backdrop-blur-md border border-gold/40 text-[10px] tracking-[0.18em] uppercase text-champagne hover:bg-burgundy">
+                        ← Prev Design
+                    </button>
+                    <button onclick="stepLookModal(1)" class="btn-press px-3.5 py-2 rounded-full bg-obsidian/85 backdrop-blur-md border border-gold/40 text-[10px] tracking-[0.18em] uppercase text-champagne hover:bg-burgundy">
+                        Next Design →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Details Column -->
+            <div class="md:col-span-6 p-6 sm:p-8 md:p-10 flex flex-col justify-between space-y-6">
+                <div>
+                    <div class="flex items-center justify-between gap-2">
+                        <span id="modalBadge" class="text-[11px] tracking-[0.22em] uppercase text-gold font-medium">Design N° 01</span>
+                        <button onclick="closeLookModal()" class="btn-press px-3 py-1 rounded-full border border-gold/25 text-[11px] tracking-widest uppercase text-sand hover:text-ivory hover:border-gold">Close ✕</button>
+                    </div>
+                    <h3 id="modalTitle" class="font-serif text-3xl md:text-4xl text-ivory mt-3 font-light leading-tight"></h3>
+                    <p id="modalMaterial" class="text-[11px] tracking-[0.18em] uppercase text-champagne mt-2"></p>
+                    <p id="modalDesc" class="text-sand text-sm leading-relaxed font-light mt-5"></p>
+
+                    <!-- Craft Highlights -->
+                    <div class="mt-5 pt-4 border-t border-gold/15">
+                        <p class="text-[10px] tracking-[0.22em] uppercase text-gold mb-1.5 font-medium">Atelier Tailoring Notes</p>
+                        <p id="modalNotes" class="text-xs text-ivory/90 font-light leading-relaxed"></p>
+                    </div>
+
+                    <!-- Tailoring Tier Selector -->
+                    <div class="mt-5 pt-4 border-t border-gold/15 space-y-2">
+                        <label for="modalTierSelect" class="block text-[10px] tracking-[0.22em] uppercase text-gold font-medium">Select Commission Option</label>
+                        <select id="modalTierSelect" class="w-full px-4 py-2.5 rounded-xl bg-obsidian border border-gold/30 text-xs text-ivory focus:outline-none focus:border-gold">
+                            <option value="Full Bespoke Made-to-Measure">Full Bespoke Made-to-Measure (Atelier Fitting)</option>
+                            <option value="Custom Fabric Shade &amp; Thread Embroidery">Custom Fabric Shade &amp; Contrast Thread Embroidery</option>
+                            <option value="Ceremonial / Groom &amp; Bridal Party Ensemble">Ceremonial / Groom &amp; Bridal Party Ensemble</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gold/20 flex items-center justify-between text-sm">
+                        <span class="text-sand">Craftsmanship Tier</span>
+                        <span id="modalPrice" class="font-serif text-xl italic gold-text"></span>
+                    </div>
+                </div>
+
+                <!-- Modal Action Buttons -->
+                <div class="space-y-2.5">
+                    <button onclick="reserveThisPiece()" class="btn-press w-full py-3.5 rounded-full bg-gradient-to-r from-champagne via-gold to-bronze text-obsidian text-xs tracking-[0.2em] uppercase font-bold hover:brightness-105">
+                        Reserve for Fitting at Wuse Atelier
+                    </button>
+                    <button onclick="inquirePieceOnWhatsApp()" class="btn-press w-full py-3 rounded-full bg-whatsapp/20 border border-whatsapp/50 text-whatsapp hover:bg-whatsapp hover:text-obsidian text-xs tracking-[0.18em] uppercase font-semibold flex items-center justify-center gap-2">
+                        <span>Inquire About This Style on WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- PRIVATE CONSULTATION BOOKING MODAL                                    -->
+    <!-- ===================================================================== -->
+    <div id="bookingModal" class="modal-backdrop fixed inset-0 z-50 hidden bg-obsidian/85 backdrop-blur-md flex items-center justify-center p-4 md:p-8">
+        <div class="modal-panel bg-velvet border border-gold/40 rounded-3xl max-w-xl w-full p-6 sm:p-8 md:p-10 shadow-2xl space-y-6">
+            <div class="flex items-center justify-between border-b border-gold/20 pb-4">
+                <div>
+                    <p class="text-[10px] tracking-[0.24em] uppercase text-gold font-medium">Jarmai Private Concierge</p>
+                    <h3 class="font-serif text-3xl text-ivory font-light">Book a Salon Fitting</h3>
+                </div>
+                <button onclick="closeBookingModal()" class="btn-press px-3 py-1 rounded-full border border-gold/25 text-[11px] tracking-widest uppercase text-sand hover:text-ivory hover:border-gold">Close ✕</button>
+            </div>
+
+            <form id="bookingForm" onsubmit="submitFitting(event)" class="space-y-4">
+                <div>
+                    <label for="guestName" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5 font-medium">Full Name</label>
+                    <input id="guestName" type="text" required placeholder="e.g. Ibrahim Aliyu or Aisha Bello" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory placeholder:text-sand/45 focus:outline-none focus:border-gold" />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="guestSalon" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5 font-medium">Fitting Format</label>
+                        <select id="guestSalon" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory focus:outline-none focus:border-gold">
+                            <option value="Abuja Atelier (Green Garden Complex, Wuse Zone 1)">Abuja Atelier (Green Garden Complex, Wuse Zone 1)</option>
+                            <option value="Virtual Measurement Consultation">Virtual Measurement Consultation</option>
+                            <option value="Ceremonial Wedding Party Commission">Ceremonial Wedding Party Commission</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="guestDate" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5 font-medium">Preferred Date</label>
+                        <input id="guestDate" type="date" required value="2026-11-24" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory focus:outline-none focus:border-gold" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="guestPiece" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5 font-medium">Selected Style / Design</label>
+                    <select id="guestPiece" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory focus:outline-none focus:border-gold">
+                        <!-- Options synced from PIECES -->
+                    </select>
+                </div>
+
+                <div>
+                    <label for="guestNotes" class="block text-[11px] tracking-[0.18em] uppercase text-gold mb-1.5 font-medium">Colorway or Measurement Notes (Optional)</label>
+                    <input id="guestNotes" type="text" placeholder="Preferred fabric shade, event date, or custom embroidery request" class="w-full px-4 py-3 rounded-xl bg-obsidian border border-gold/25 text-sm text-ivory placeholder:text-sand/45 focus:outline-none focus:border-gold" />
+                </div>
+
+                <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <button type="submit" class="btn-press w-full py-3.5 rounded-full bg-gradient-to-r from-champagne via-gold to-bronze text-obsidian text-xs tracking-[0.2em] uppercase font-bold hover:brightness-105">
+                        Confirm Appointment
+                    </button>
+                    <button type="button" onclick="submitToWhatsAppDirect()" class="btn-press w-full py-3.5 rounded-full bg-whatsapp/20 border border-whatsapp/50 text-whatsapp hover:bg-whatsapp hover:text-obsidian text-xs tracking-[0.18em] uppercase font-semibold">
+                        Confirm on WhatsApp →
+                    </button>
+                </div>
+            </form>
+
+            <div id="bookingSuccess" class="hidden p-6 rounded-2xl bg-obsidian border border-gold/40 text-center space-y-2.5">
+                <p class="text-xs tracking-[0.22em] uppercase text-gold font-medium">✓ Atelier Appointment Registered</p>
+                <p id="bookingSummary" class="font-serif text-2xl text-ivory"></p>
+                <p id="bookingRef" class="text-[11px] tracking-[0.2em] uppercase text-champagne"></p>
+                <p class="text-xs text-sand font-light">
+                    Our Master Tailor at Jarmai Fashion Design (Green Garden Complex, Wuse Zone 1, Abuja) will prepare fabric swatches and measurement profiles ahead of your session.
+                </p>
+                <div class="pt-2">
+                    <a id="successWhatsAppLink" href="#" target="_blank" rel="noopener" class="btn-press inline-block px-5 py-2.5 rounded-full bg-whatsapp text-obsidian text-xs tracking-[0.16em] uppercase font-bold">
+                        Open Appointment in WhatsApp →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- INTERACTIVE SCRIPTS: SHUFFLING DECKS, GALLERY, 3D SILK & MODALS       -->
+    <!-- ===================================================================== -->
+    <script>
+        /* 1. JARMAI FASHION DESIGN — CURATED OFFICIAL PIECES FROM FOLDERS 1 & 2 */
+        const PIECES = [
+            {
+                id: 0,
+                badge: "Design N° 01",
+                category: "agbada",
+                categoryLabel: "Royal Agbada",
+                title: "The Midnight Sovereign Grand Agbada",
+                swatch: "Heavy Silk-Wool · Hand-Embroidered Half-Mandala Zardozi",
+                tier: "Ceremonial Bespoke",
+                img: "images/1/2349063460563_s_whatsapp_net-A5D114F91437B4768684B48A248B4B15.jpg",
+                desc: "Commanding midnight obsidian three-piece ceremonial Agbada anchored by an architectural half-mandala zardozi medallion embroidery, metallic stud closures, and regal winged shoulders.",
+                notes: "Includes floor-length outer robe, matching inner mandarin-collar tunic, and tailored drawstring trousers."
+            },
+            {
+                id: 1,
+                badge: "Design N° 02",
+                category: "agbada",
+                categoryLabel: "Royal Agbada",
+                title: "Desert Gold Concentric Agbada",
+                swatch: "Cashmere Suiting · Concentric Geometric Gold Yoke",
+                tier: "Ceremonial Bespoke",
+                img: "images/1/2349063460563_s_whatsapp_net-A52B4C7345B269C433CB11B4C322185A.jpg",
+                desc: "Desert tan-gold royal Agbada adorned with an asymmetric stepped and circular concentric geometric chest motif, tailored with matching inner tunic and reinforced sleeve folds.",
+                notes: "Designed for high-profile weddings, coronations, and national ceremonies."
+            },
+            {
+                id: 2,
+                badge: "Design N° 03",
+                category: "kaftan",
+                categoryLabel: "Kaftans & Senators",
+                title: "Alabaster Stepped Chevron Kaftan",
+                swatch: "Crisp Egyptian Cotton · Diamond Lattice Center Placket",
+                tier: "Atelier Tailored",
+                img: "images/1/2349063460563_s_whatsapp_net-A52C6011B5D97357117034592C15DF34.jpg",
+                desc: "Pristine alabaster white tailored kaftan featuring an architecturally tiered mosaic chevron embroidery descending the mandarin placket, accented with brass stud buttons.",
+                notes: "Double-stitched French seams, crisp wrinkle-resistant cotton weave, and reinforced collar stand."
+            },
+            {
+                id: 3,
+                badge: "Design N° 04",
+                category: "kaftan",
+                categoryLabel: "Kaftans & Senators",
+                title: "Caramel Honeycomb Senator Suit",
+                swatch: "Italian Wool-Blend · Braided Chain Placket & Pocket Trim",
+                tier: "Atelier Tailored",
+                img: "images/1/2349063460563_s_whatsapp_net-A5230C96537511F40C1311A16CEB87B4.jpg",
+                desc: "Warm caramel-tan tailored Senator suit with vertical braided chain needlework tracing the hidden placket, bordered breast pocket, and French-cuff sleeves.",
+                notes: "Includes matching tapered ankle trousers with internal hook closure and belt loops."
+            },
+            {
+                id: 4,
+                badge: "Design N° 05",
+                category: "kaftan",
+                categoryLabel: "Kaftans & Senators",
+                title: "Espresso Diamond Motif Senator",
+                swatch: "High-Twist Tropical Wool · Gold Beaded Placket & Diamond Yoke",
+                tier: "Atelier Tailored",
+                img: "images/1/2349063460563_s_whatsapp_net-A517DB4CFF1609369DFCC0630003BFA3.jpg",
+                desc: "Deep espresso brown Senator tunic featuring a vertical gold bead-chain center placket and asymmetric diamond medallion chest embroidery.",
+                notes: "Cut for sharp posture with structured chest canvas and concealed side seam pockets."
+            },
+            {
+                id: 5,
+                badge: "Design N° 06",
+                category: "kaftan",
+                categoryLabel: "Kaftans & Senators",
+                title: "Midnight Slate Geometric Senator",
+                swatch: "Premium Suiting Fabric · Contrast Inset Pocket Embroidery",
+                tier: "Atelier Tailored",
+                img: "images/1/2349063460563_s_whatsapp_net-A5731B4022DFBCBEFD6E8A01AFBBC27F.jpg",
+                desc: "Sleek charcoal-slate kaftan accented with an ornate geometric diamond-embroidered chest pocket inset and minimal mandarin collar.",
+                notes: "Reinforced structured collar, mitred breast pocket, and custom-tapered fit."
+            },
+            {
+                id: 6,
+                badge: "Design N° 07",
+                category: "kaftan",
+                categoryLabel: "Kaftans & Senators",
+                title: "Platinum Frost Micro-Honeycomb Tunic",
+                swatch: "Silky Finished Cotton · Gradient Hexagonal Needlework",
+                tier: "Atelier Tailored",
+                img: "images/1/2349063460563_s_whatsapp_net-A55B578CCCE47259D56CE9433AB71058.jpg",
+                desc: "Platinum frost grey tailored tunic with a modern gradient hexagonal micro-embroidery breast pocket and clean fly front.",
+                notes: "Minimalist modern styling for formal occasions, summits, and executive wear."
+            },
+            {
+                id: 7,
+                badge: "Design N° 08",
+                category: "womenswear",
+                categoryLabel: "Womenswear & Boubou",
+                title: "Canary Yellow Eyelet Lace Boubou",
+                swatch: "Artisanal Guipure Eyelet Lace · Butterfly Kimono Sleeves",
+                tier: "Signature Couture",
+                img: "images/2/2349063460563_s_whatsapp_net-A50CD3CD2C673BC900C28EFF08E2C651.jpg",
+                desc: "Radiant canary yellow floor-sweeping boubou tailored from intricate circular eyelet guipure lace, with a scalloped neckline and fluid kimono butterfly wings.",
+                notes: "Features matching slip lining, breathable artisanal lace weave, and custom floor-length drape."
+            },
+            {
+                id: 8,
+                badge: "Design N° 09",
+                category: "womenswear",
+                categoryLabel: "Womenswear & Boubou",
+                title: "Midnight Indigo Pleated Silhouette Gown",
+                swatch: "Micro-Pleated Silk Chiffon · Split Kimono Capelet",
+                tier: "Signature Couture",
+                img: "images/2/2349063460563_s_whatsapp_net-A515732836FD2401324405D441572DE4.jpg",
+                desc: "Ethereal deep indigo-blue occasion gown featuring an architectural solid shoulder yoke and cascading vertical micro-pleats with draped kimono split sleeves.",
+                notes: "Fluid motion with zero clinging, designed for effortless gala and evening elegance."
+            },
+            {
+                id: 9,
+                badge: "Design N° 10",
+                category: "womenswear",
+                categoryLabel: "Womenswear & Boubou",
+                title: "Royal Amethyst Jacquard Occasion Gown",
+                swatch: "Loomed Purple & Obsidian Silk · Scalloped Lace Bell Flounces",
+                tier: "Signature Couture",
+                img: "images/2/2349063460563_s_whatsapp_net-A5732BF9305F911DFD2AB60F3E1A1D8C.jpg",
+                desc: "Structured occasion dress in deep amethyst purple textured jacquard, featuring delicate scalloped lace bell flounces and cinched bodice.",
+                notes: "Hand-lined with silk-cotton for all-day comfort at weddings and banquets."
+            },
+            {
+                id: 10,
+                badge: "Design N° 11",
+                category: "showroom",
+                categoryLabel: "Atelier & Showroom",
+                title: "The Jarmai Master Atelier & Showroom",
+                swatch: "Abuja Flagship Salon · Green Garden Complex, Wuse Zone 1",
+                tier: "Atelier Experience",
+                img: "images/2/2349063460563_s_whatsapp_net-A5C14AEA15E39A45B42CC834C0CDDB9A.jpg",
+                desc: "The Master Tailor in bespoke white Jarmai tunic inside our Abuja boutique salon featuring our illuminated brand crest and luxury golden garment racks.",
+                notes: "Visit us at Green Garden & Events Complex, Dakar Street, Wuse Zone 1, Abuja."
+            },
+            {
+                id: 11,
+                badge: "Design N° 12",
+                category: "showroom",
+                categoryLabel: "Atelier & Showroom",
+                title: "Curated Silk & Velvet Collection Racks",
+                swatch: "Bespoke Abayas, Boubous & Kaftans · Ready-to-Wear",
+                tier: "Atelier Experience",
+                img: "images/2/2349063460563_s_whatsapp_net-A5C553C437988B04F1D3568AC8912A54.jpg",
+                desc: "Exclusive selection of bespoke silk kaftans, velvet robes, and ready-to-wear pieces in mustard gold, royal plum, midnight teal, and sand.",
+                notes: "Available for instant viewing, fitting, and custom alterations at the showroom."
+            }
+        ];
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* 2. HERO SHUFFLING DECK STATE & CONTROLS */
+        let heroIndex = 0;
+        let heroAutoShuffle = !prefersReducedMotion;
+        let heroPausedByHover = false;
+        const HERO_INTERVAL_MS = 4800;
+        let heroProgressFrame = null;
+        let heroProgressStart = performance.now();
+
+        function renderHeroThumbs() {
+            const container = document.getElementById('heroThumbs');
+            if (!container) return;
+            const previewSet = PIECES.slice(0, 6);
+            container.innerHTML = previewSet.map((piece, idx) => `
+                <button onclick="jumpHeroLook(${idx})"
+                        aria-label="Preview ${piece.title}"
+                        class="btn-press group relative aspect-square rounded-xl overflow-hidden border transition-all duration-200 ${idx === heroIndex ? 'border-gold ring-2 ring-gold/40 scale-[1.03]' : 'border-gold/25 opacity-60 hover:opacity-100 hover:border-gold/60'}">
+                    <img src="${piece.img}" alt="${piece.title}" class="w-full h-full object-cover object-top" />
+                </button>
+            `).join('');
+        }
+
+        function updateHeroDeck(targetIdx, animateSwap = true) {
+            const total = PIECES.length;
+            heroIndex = ((targetIdx % total) + total) % total;
+            const current = PIECES[heroIndex];
+            const next1 = PIECES[(heroIndex + 1) % total];
+            const next2 = PIECES[(heroIndex + 2) % total];
+
+            const mainImg = document.getElementById('heroMainImg');
+            const backImg1 = document.getElementById('heroBackImg1');
+            const backImg2 = document.getElementById('heroBackImg2');
+
+            if (animateSwap && mainImg) {
+                mainImg.classList.add('is-swapping');
+                mainImg.classList.remove('ken-burns');
+                setTimeout(() => {
+                    mainImg.src = current.img;
+                    mainImg.alt = current.title;
+                    if (backImg1) backImg1.src = next1.img;
+                    if (backImg2) backImg2.src = next2.img;
+
+                    document.getElementById('heroPieceBadge').textContent = `${current.badge} / ${total}`;
+                    document.getElementById('heroCategoryBadge').textContent = current.categoryLabel;
+                    document.getElementById('heroPieceTitle').textContent = current.title;
+                    document.getElementById('heroPieceSwatch').textContent = current.swatch;
+
+                    requestAnimationFrame(() => {
+                        mainImg.classList.remove('is-swapping');
+                        if (!prefersReducedMotion) mainImg.classList.add('ken-burns');
+                    });
+                }, 200);
+            } else if (mainImg) {
+                mainImg.src = current.img;
+                mainImg.alt = current.title;
+                if (backImg1) backImg1.src = next1.img;
+                if (backImg2) backImg2.src = next2.img;
+                document.getElementById('heroPieceBadge').textContent = `${current.badge} / ${total}`;
+                document.getElementById('heroCategoryBadge').textContent = current.categoryLabel;
+                document.getElementById('heroPieceTitle').textContent = current.title;
+                document.getElementById('heroPieceSwatch').textContent = current.swatch;
+                if (!prefersReducedMotion) mainImg.classList.add('ken-burns');
+            }
+
+            heroProgressStart = performance.now();
+            renderHeroThumbs();
+        }
+
+        function nextHeroLook() {
+            updateHeroDeck(heroIndex + 1, true);
+        }
+
+        function prevHeroLook() {
+            updateHeroDeck(heroIndex - 1, true);
+        }
+
+        function jumpHeroLook(idx) {
+            updateHeroDeck(idx, true);
+        }
+
+        function shuffleHeroNext() {
+            let randomIdx = Math.floor(Math.random() * PIECES.length);
+            if (randomIdx === heroIndex) randomIdx = (heroIndex + 1) % PIECES.length;
+            updateHeroDeck(randomIdx, true);
+        }
+
+        function openActiveHeroLook() {
+            openLookModal(PIECES[heroIndex].id);
+        }
+
+        function pauseHeroShuffle(paused) {
+            heroPausedByHover = paused;
+            if (!paused) heroProgressStart = performance.now();
+        }
+
+        function toggleHeroAutoShuffle() {
+            heroAutoShuffle = !heroAutoShuffle;
+            heroProgressStart = performance.now();
+            const label = document.getElementById('heroPlayLabel');
+            const dot = document.getElementById('heroPlayDot');
+            if (label) label.textContent = `Auto-Shuffle: ${heroAutoShuffle ? 'On' : 'Off'}`;
+            if (dot) dot.className = heroAutoShuffle
+                ? 'w-1.5 h-1.5 rounded-full bg-gold animate-pulse'
+                : 'w-1.5 h-1.5 rounded-full bg-sand';
+            if (!heroAutoShuffle) {
+                const bar = document.getElementById('heroProgressBar');
+                if (bar) bar.style.transform = 'scaleX(0)';
+            }
+        }
+
+        function tickHeroProgress(now) {
+            const bar = document.getElementById('heroProgressBar');
+            if (heroAutoShuffle && !heroPausedByHover && !isAnyModalOpen()) {
+                const elapsed = now - heroProgressStart;
+                const ratio = Math.min(elapsed / HERO_INTERVAL_MS, 1);
+                if (bar) bar.style.transform = `scaleX(${ratio})`;
+                if (elapsed >= HERO_INTERVAL_MS) {
+                    heroProgressStart = now;
+                    nextHeroLook();
+                }
+            }
+            heroProgressFrame = requestAnimationFrame(tickHeroProgress);
+        }
+
+        /* 3. LOOKBOOK COLLECTION FILTERING & GRID SHUFFLING */
+        let currentFilter = 'all';
+        let lookbookOrder = [...PIECES];
+        let gridAutoShuffle = !prefersReducedMotion;
+        let gridAutoTimer = null;
+
+        function getLayoutClasses(index, total) {
+            const mod = index % 3;
+            if (mod === 0) return { col: 'md:col-span-5', aspect: 'aspect-[4/5]' };
+            if (mod === 1) return { col: 'md:col-span-4 md:mt-12', aspect: 'aspect-[3/4]' };
+            return { col: 'md:col-span-3', aspect: 'aspect-[4/5]' };
+        }
+
+        function renderLookbook(animateShuffle = false) {
+            const container = document.getElementById('lookbookGrid');
+            if (!container) return;
+
+            const filtered = currentFilter === 'all'
+                ? lookbookOrder
+                : lookbookOrder.filter(item => item.category === currentFilter);
+
+            const drawCards = () => {
+                container.innerHTML = filtered.map((piece, idx) => {
+                    const layout = getLayoutClasses(idx, filtered.length);
+                    return `
+                        <article onclick="openLookModal(${piece.id})"
+                                 data-cursor="INSPECT"
+                                 class="grid-card-item ${layout.col} group cursor-pointer">
+                            <div onmousemove="tiltCard(event, this)"
+                                 onmouseleave="resetTilt(this)"
+                                 class="editorial-card rounded-2xl bg-velvet p-3 border border-gold/30 shadow-lg hover:shadow-2xl hover:shadow-gold/10 ${layout.aspect} relative">
+                                <div class="sheen-layer"></div>
+                                <div class="w-full h-full rounded-xl overflow-hidden bg-obsidian relative border border-gold/15">
+                                    <img src="${piece.img}"
+                                         alt="${piece.title}"
+                                         class="w-full h-full object-cover object-top" />
+                                    <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-obsidian/85 to-transparent pointer-events-none"></div>
+                                    <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
+                                        <span class="px-3 py-1 rounded-full bg-obsidian/90 backdrop-blur-md border border-gold/35 text-[10px] tracking-[0.14em] uppercase text-champagne truncate">
+                                            ${piece.swatch}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 px-1 flex items-baseline justify-between gap-3">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[11px] tracking-[0.2em] uppercase text-gold font-medium">${piece.badge}</span>
+                                        <span class="text-[10px] tracking-[0.15em] uppercase text-sand/75">· ${piece.categoryLabel}</span>
+                                    </div>
+                                    <h3 class="font-serif text-2xl text-ivory font-light group-hover:text-champagne group-hover:italic transition-all mt-0.5">${piece.title}</h3>
+                                </div>
+                                <span class="font-serif text-sm italic text-gold shrink-0">${piece.tier}</span>
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            };
+
+            if (animateShuffle && !prefersReducedMotion) {
+                const existing = container.querySelectorAll('.grid-card-item');
+                existing.forEach(el => el.classList.add('shuffling-out'));
+                setTimeout(() => {
+                    drawCards();
+                }, 200);
+            } else {
+                drawCards();
+            }
+        }
+
+        function setCategoryFilter(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                const active = btn.getAttribute('data-filter') === filter;
+                btn.className = active
+                    ? 'filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-gold text-obsidian border-gold font-bold'
+                    : 'filter-btn btn-press px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase border transition-colors bg-velvet text-sand border-gold/25 hover:border-gold hover:text-ivory';
+            });
+            renderLookbook(true);
+        }
+
+        function shuffleLookbookGrid() {
+            const arr = [...lookbookOrder];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            if (arr.length > 1 && arr[0].id === lookbookOrder[0].id) {
+                const first = arr.shift();
+                arr.push(first);
+            }
+            lookbookOrder = arr;
+            renderLookbook(true);
+        }
+
+        function rotateLookbookOrder() {
+            const arr = [...lookbookOrder];
+            const first = arr.shift();
+            arr.push(first);
+            lookbookOrder = arr;
+            renderLookbook(true);
+        }
+
+        function toggleGridAutoShuffle() {
+            gridAutoShuffle = !gridAutoShuffle;
+            document.getElementById('gridAutoLabel').textContent = `Live Rotate: ${gridAutoShuffle ? 'On' : 'Off'}`;
+            document.getElementById('gridAutoDot').className = gridAutoShuffle
+                ? 'w-1.5 h-1.5 rounded-full bg-gold animate-pulse'
+                : 'w-1.5 h-1.5 rounded-full bg-sand';
+            setupGridAutoTimer();
+        }
+
+        function setupGridAutoTimer() {
+            if (gridAutoTimer) clearInterval(gridAutoTimer);
+            if (!gridAutoShuffle) return;
+            gridAutoTimer = setInterval(() => {
+                const grid = document.getElementById('lookbookGrid');
+                const hovered = grid && grid.matches(':hover');
+                if (!hovered && !isAnyModalOpen() && !document.hidden) {
+                    rotateLookbookOrder();
+                }
+            }, 8500);
+        }
+
+        /* 4. 3D GENTLE CARD TILT & GOLDEN SPECULAR SHEEN */
+        function tiltCard(e, el) {
+            if (prefersReducedMotion || window.matchMedia('(pointer: coarse)').matches) return;
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            el.style.setProperty('--mx', `${x}px`);
+            el.style.setProperty('--my', `${y}px`);
+            const rx = ((y / rect.height) - 0.5) * -4.2;
+            const ry = ((x / rect.width) - 0.5) * 4.2;
+            el.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+        }
+
+        function resetTilt(el) {
+            el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+        }
+
+        /* 5. CUSTOM MAGNETIC CURSOR FOLLOWER */
+        const follower = document.getElementById('cursorFollower');
+        const cursorText = document.getElementById('cursorText');
+        let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+        let fx = mx, fy = my;
+
+        window.addEventListener('mousemove', (e) => {
+            mx = e.clientX;
+            my = e.clientY;
+            const target = e.target.closest('[data-cursor]');
+            if (target && follower) {
+                follower.classList.add('active');
+                cursorText.textContent = target.getAttribute('data-cursor');
+                cursorText.style.opacity = '1';
+            } else if (follower) {
+                follower.classList.remove('active');
+                cursorText.style.opacity = '0';
+            }
+        });
+
+        function updateCursor() {
+            fx += (mx - fx) * 0.16;
+            fy += (my - fy) * 0.16;
+            if (follower) {
+                follower.style.left = `${fx}px`;
+                follower.style.top = `${fy}px`;
+            }
+            requestAnimationFrame(updateCursor);
+        }
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            updateCursor();
+        }
+
+        /* 6. THREE.JS FLOWING GOLD-SHOT BURGUNDY SILK RIBBON IN HERO */
+        function initHeroSilk() {
+            const canvas = document.getElementById('silkHeroCanvas');
+            if (!canvas || typeof THREE === 'undefined' || prefersReducedMotion) return;
+
+            const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(40, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
+            camera.position.set(0, 0, 5.5);
+
+            scene.add(new THREE.AmbientLight(0x57090F, 1.4));
+            const goldLight = new THREE.DirectionalLight(0xF9E18E, 1.8);
+            goldLight.position.set(3, 4, 3);
+            scene.add(goldLight);
+
+            const crimsonLight = new THREE.DirectionalLight(0x8C1420, 1.2);
+            crimsonLight.position.set(-4, -2, 2);
+            scene.add(crimsonLight);
+
+            const geo = new THREE.PlaneGeometry(9.5, 4.4, 64, 40);
+            const mat = new THREE.MeshPhysicalMaterial({
+                color: 0x4A0912,
+                emissive: 0x1D0308,
+                roughness: 0.28,
+                metalness: 0.55,
+                clearcoat: 0.5,
+                side: THREE.DoubleSide
+            });
+
+            const ribbon = new THREE.Mesh(geo, mat);
+            ribbon.rotation.x = -0.28;
+            ribbon.rotation.z = -0.09;
+            scene.add(ribbon);
+
+            function resize() {
+                if (!canvas.clientWidth) return;
+                renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            const clock = new THREE.Clock();
+            function animate() {
+                const t = clock.getElapsedTime() * 0.52;
+                const pos = geo.attributes.position;
+                for (let i = 0; i < pos.count; i++) {
+                    const x = pos.getX(i);
+                    const y = pos.getY(i);
+                    const z = Math.sin(x * 0.85 + t) * 0.28 + Math.cos(y * 1.15 + t * 0.8) * 0.16;
+                    pos.setZ(i, z);
+                }
+                pos.needsUpdate = true;
+                geo.computeVertexNormals();
+                renderer.render(scene, camera);
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        /* 7. CAMPAIGN MOTION SHOWCASE + SYNCHRONIZED RUNWAY REEL */
+        let filmPlaying = !prefersReducedMotion;
+        let filmTime = 0;
+        let filmSlideIdx = 0;
+        let filmSlideTimer = null;
+
+        function shuffleFilmSlide(idxOverride = null) {
+            filmSlideIdx = idxOverride !== null ? idxOverride : (filmSlideIdx + 1) % PIECES.length;
+            const piece = PIECES[filmSlideIdx];
+            const img = document.getElementById('filmLookImg');
+            const name = document.getElementById('filmPieceName');
+            const tag = document.getElementById('filmLookTag');
+
+            if (img) {
+                img.classList.add('is-swapping');
+                setTimeout(() => {
+                    img.src = piece.img;
+                    img.alt = piece.title;
+                    if (name) name.textContent = piece.title;
+                    if (tag) tag.textContent = `${piece.badge} · ${piece.categoryLabel}`;
+                    requestAnimationFrame(() => img.classList.remove('is-swapping'));
+                }, 190);
+            }
+        }
+
+        function openFilmLook() {
+            openLookModal(PIECES[filmSlideIdx].id);
+        }
+
+        function initCampaignFilm() {
+            const canvas = document.getElementById('campaignFilmCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            function resize() {
+                canvas.width = canvas.clientWidth || 960;
+                canvas.height = canvas.clientHeight || 540;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            function draw() {
+                if (filmPlaying) filmTime += 0.015;
+                const w = canvas.width;
+                const h = canvas.height;
+
+                const grad = ctx.createLinearGradient(0, 0, w, h);
+                grad.addColorStop(0, '#110106');
+                grad.addColorStop(0.55, '#26060D');
+                grad.addColorStop(1, '#420812');
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, w, h);
+
+                // Golden Zardozi Threads & Velvet Silk Curves
+                for (let i = 0; i < 20; i++) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = i % 4 === 0
+                        ? 'rgba(235, 182, 61, 0.36)'
+                        : 'rgba(249, 225, 142, 0.12)';
+                    ctx.lineWidth = i % 4 === 0 ? 1.6 : 1.0;
+                    for (let x = 0; x <= w; x += 18) {
+                        const y = h * 0.52
+                            + Math.sin(x * 0.0048 + filmTime + i * 0.2) * (52 + i * 3.4)
+                            + Math.cos(x * 0.009 - filmTime * 0.65) * 22;
+                        if (x === 0) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    ctx.stroke();
+                }
+
+                requestAnimationFrame(draw);
+            }
+            draw();
+
+            if (filmSlideTimer) clearInterval(filmSlideTimer);
+            filmSlideTimer = setInterval(() => {
+                if (filmPlaying && !isAnyModalOpen() && !document.hidden) {
+                    shuffleFilmSlide();
+                }
+            }, 5200);
+        }
+
+        function toggleFilmPlay() {
+            filmPlaying = !filmPlaying;
+            document.getElementById('filmToggleBtn').textContent = filmPlaying ? 'Pause Motion' : 'Resume Motion';
+            document.getElementById('filmStatusText').textContent = filmPlaying ? 'Playing' : 'Paused';
+        }
+
+        // Gentle Web Audio API Warm Chord (C3 + G3 + D4)
+        let audioCtx = null;
+        let soundOn = false;
+        let masterGain = null;
+
+        function toggleAmbientSound() {
+            if (!audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                audioCtx = new AudioContext();
+                const osc1 = audioCtx.createOscillator();
+                const osc2 = audioCtx.createOscillator();
+                const osc3 = audioCtx.createOscillator();
+                osc1.type = 'sine';
+                osc2.type = 'triangle';
+                osc3.type = 'sine';
+                osc1.frequency.value = 130.81;
+                osc2.frequency.value = 196.00;
+                osc3.frequency.value = 293.66;
+
+                const filter = audioCtx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.value = 260;
+
+                masterGain = audioCtx.createGain();
+                masterGain.gain.value = 0.03;
+
+                osc1.connect(filter);
+                osc2.connect(filter);
+                osc3.connect(filter);
+                filter.connect(masterGain);
+                masterGain.connect(audioCtx.destination);
+                osc1.start();
+                osc2.start();
+                osc3.start();
+                soundOn = true;
+            } else {
+                if (soundOn) {
+                    masterGain.gain.setTargetAtTime(0.0001, audioCtx.currentTime, 0.25);
+                    soundOn = false;
+                } else {
+                    audioCtx.resume();
+                    masterGain.gain.setTargetAtTime(0.03, audioCtx.currentTime, 0.25);
+                    soundOn = true;
+                }
+            }
+            document.getElementById('soundLabel').textContent = `Sound: ${soundOn ? 'On' : 'Off'}`;
+            document.getElementById('soundDot').className = soundOn
+                ? 'w-1.5 h-1.5 rounded-full bg-gold animate-ping'
+                : 'w-1.5 h-1.5 rounded-full bg-sand';
+        }
+
+        /* 8. MODALS, WHATSAPP ACTIONS, MOBILE MENU & SCROLL REVEAL */
+        let currentModalPieceId = PIECES[0].id;
+
+        function isAnyModalOpen() {
+            const lookOpen = !document.getElementById('lookModal').classList.contains('hidden');
+            const bookOpen = !document.getElementById('bookingModal').classList.contains('hidden');
+            return lookOpen || bookOpen;
+        }
+
+        function syncBodyScrollLock() {
+            document.body.style.overflow = isAnyModalOpen() ? 'hidden' : '';
+        }
+
+        function populatePieceOptions() {
+            const select = document.getElementById('guestPiece');
+            if (!select) return;
+            select.innerHTML = PIECES.map(p => `<option value="${p.title}">${p.badge} — ${p.title}</option>`).join('') +
+                `<option value="Custom Bespoke Commission">Custom Bespoke Commission (New Design)</option>`;
+        }
+
+        function openLookModal(id) {
+            const idx = PIECES.findIndex(item => item.id === id);
+            const p = idx >= 0 ? PIECES[idx] : PIECES[0];
+            currentModalPieceId = p.id;
+
+            document.getElementById('modalImg').src = p.img;
+            document.getElementById('modalImg').alt = p.title;
+            document.getElementById('modalBadge').textContent = `${p.badge} · ${p.categoryLabel}`;
+            document.getElementById('modalTitle').textContent = p.title;
+            document.getElementById('modalMaterial').textContent = p.swatch;
+            document.getElementById('modalDesc').textContent = p.desc;
+            document.getElementById('modalNotes').textContent = p.notes;
+            document.getElementById('modalPrice').textContent = p.tier;
+
+            const modal = document.getElementById('lookModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('is-entering');
+            syncBodyScrollLock();
+            requestAnimationFrame(() => modal.classList.remove('is-entering'));
+        }
+
+        function stepLookModal(direction) {
+            const idx = PIECES.findIndex(item => item.id === currentModalPieceId);
+            const nextIdx = ((idx + direction) + PIECES.length) % PIECES.length;
+            openLookModal(PIECES[nextIdx].id);
+        }
+
+        function closeLookModal() {
+            document.getElementById('lookModal').classList.add('hidden');
+            syncBodyScrollLock();
+        }
+
+        function reserveThisPiece() {
+            const selectedPiece = PIECES.find(p => p.id === currentModalPieceId) || PIECES[0];
+            const tierVal = document.getElementById('modalTierSelect').value;
+            closeLookModal();
+            openBookingModal(selectedPiece.title, tierVal);
+        }
+
+        function inquirePieceOnWhatsApp() {
+            const selectedPiece = PIECES.find(p => p.id === currentModalPieceId) || PIECES[0];
+            const tierVal = document.getElementById('modalTierSelect').value;
+            const message = `Hello Jarmai Fashion Design, I would like to inquire about ${selectedPiece.title} (${selectedPiece.badge}, ${tierVal}) at your Abuja atelier.`;
+            const url = `https://wa.me/2348054271819?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        function openBookingModal(pieceTitle = null, notePrefill = '') {
+            document.getElementById('bookingSuccess').classList.add('hidden');
+            document.getElementById('bookingForm').classList.remove('hidden');
+            if (pieceTitle) {
+                document.getElementById('guestPiece').value = pieceTitle;
+            }
+            if (notePrefill) {
+                document.getElementById('guestNotes').value = notePrefill;
+            }
+            const modal = document.getElementById('bookingModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('is-entering');
+            syncBodyScrollLock();
+            requestAnimationFrame(() => modal.classList.remove('is-entering'));
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+            syncBodyScrollLock();
+        }
+
+        function submitFitting(e) {
+            e.preventDefault();
+            const name = document.getElementById('guestName').value.trim();
+            const salon = document.getElementById('guestSalon').value;
+            const date = document.getElementById('guestDate').value;
+            const piece = document.getElementById('guestPiece').value;
+            const notes = document.getElementById('guestNotes').value.trim();
+            const refCode = 'JFD-' + Math.floor(1000 + Math.random() * 9000);
+
+            document.getElementById('bookingForm').classList.add('hidden');
+            document.getElementById('bookingSummary').textContent = `${name} — ${piece}`;
+            document.getElementById('bookingRef').textContent = `${salon} · ${date} · Ref ${refCode}`;
+
+            const waMsg = `Hello Jarmai Fashion Design, I booked a fitting: Ref ${refCode}\nName: ${name}\nStyle: ${piece}\nDate: ${date}\nLocation: ${salon}${notes ? '\nNotes: ' + notes : ''}`;
+            document.getElementById('successWhatsAppLink').href = `https://wa.me/2348054271819?text=${encodeURIComponent(waMsg)}`;
+
+            document.getElementById('bookingSuccess').classList.remove('hidden');
+        }
+
+        function submitToWhatsAppDirect() {
+            const name = document.getElementById('guestName').value.trim() || 'Valued Client';
+            const salon = document.getElementById('guestSalon').value;
+            const date = document.getElementById('guestDate').value;
+            const piece = document.getElementById('guestPiece').value;
+            const notes = document.getElementById('guestNotes').value.trim();
+            const waMsg = `Hello Jarmai Fashion Design, I would like to book a salon fitting at Green Garden Complex, Wuse Zone 1.\nName: ${name}\nStyle: ${piece}\nDate: ${date}\nFormat: ${salon}${notes ? '\nNotes: ' + notes : ''}`;
+            window.open(`https://wa.me/2348054271819?text=${encodeURIComponent(waMsg)}`, '_blank');
+        }
+
+        /* Mobile Drawer */
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobileDrawer');
+            const openIcon = document.getElementById('menuIconOpen');
+            const closeIcon = document.getElementById('menuIconClose');
+            const btn = document.getElementById('mobileMenuBtn');
+            const isHidden = drawer.classList.contains('hidden');
+            drawer.classList.toggle('hidden', !isHidden);
+            openIcon.classList.toggle('hidden', isHidden);
+            closeIcon.classList.toggle('hidden', !isHidden);
+            btn.setAttribute('aria-expanded', String(isHidden));
+        }
+
+        function closeMobileMenu() {
+            const drawer = document.getElementById('mobileDrawer');
+            if (!drawer.classList.contains('hidden')) toggleMobileMenu();
+        }
+
+        /* Scroll Reveal with IntersectionObserver */
+        function observeReveals() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+        }
+
+        /* Close Modals on Backdrop Click or Escape */
+        document.getElementById('lookModal').addEventListener('click', (e) => {
+            if (e.target.id === 'lookModal') closeLookModal();
+        });
+        document.getElementById('bookingModal').addEventListener('click', (e) => {
+            if (e.target.id === 'bookingModal') closeBookingModal();
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLookModal();
+                closeBookingModal();
+                closeMobileMenu();
+            }
+        });
+
+        /* Boot Sequence */
+        window.onload = function () {
+            PIECES.forEach(p => {
+                const preload = new Image();
+                preload.src = p.img;
+            });
+            populatePieceOptions();
+            updateHeroDeck(0, false);
+            heroProgressFrame = requestAnimationFrame(tickHeroProgress);
+            renderLookbook(false);
+            setupGridAutoTimer();
+            initHeroSilk();
+            initCampaignFilm();
+            observeReveals();
+
+            if (prefersReducedMotion) {
+                document.getElementById('heroPlayLabel').textContent = 'Auto-Shuffle: Off';
+                document.getElementById('gridAutoLabel').textContent = 'Live Rotate: Off';
+                document.getElementById('filmToggleBtn').textContent = 'Resume Motion';
+                document.getElementById('filmStatusText').textContent = 'Paused';
+            }
+        };
+    </script>
+</body>
+</html>
